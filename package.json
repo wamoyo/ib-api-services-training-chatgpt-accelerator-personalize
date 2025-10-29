@@ -1,0 +1,20 @@
+{
+  "name": "personalized-deliverables",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "System for generating and sending personalized AI deliverables to applicants",
+  "scripts": {
+    "metrics": "node scripts/metrics.js",
+    "loadup": "node scripts/loadup.js",
+    "bootup": "node scripts/bootup.js",
+    "test": "node scripts/test.js",
+    "ready": "node scripts/ready.js",
+    "send": "node scripts/send.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-ses": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "puppeteer": "^23.0.0"
+  }
+}
