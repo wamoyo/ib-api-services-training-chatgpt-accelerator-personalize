@@ -6,12 +6,13 @@ import { readFile, writeFile } from 'fs/promises'
 import { existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { createHash } from 'crypto'
 
 var __dirname = dirname(fileURLToPath(import.meta.url))
 
-// Pure: converts email to URL-safe slug
+// Pure: converts email to hex hash slug (first 12 chars of SHA256)
 function emailToSlug (email) {
-  return encodeURIComponent(email.toLowerCase())
+  return createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
 }
 
 async function markReady () {

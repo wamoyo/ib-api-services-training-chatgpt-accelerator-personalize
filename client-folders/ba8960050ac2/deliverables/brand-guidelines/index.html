@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovantage Collaborative - Brand Guidelines</title>
+
+    <!-- Google Fonts - Using similar alternatives to custom fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Innovantage Collaborative Brand Colors */
+            --brand-gold: #FCCD06;
+            --brand-cyan: #25D7F2;
+            --brand-dark-blue: #0057AE;
+            --brand-purple: #aa2377;
+            --brand-teal: #22d0c7;
+            --brand-coral: #ff6e6e;
+            --brand-text: #333;
+            --brand-background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito Sans', 'Merriweather Sans', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-cyan) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header img.logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        header .attribution {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Typography examples should be left-aligned */
+        .type-h1, .type-h2, .type-h3 {
+            text-align: left;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Introduction Box */
+        .intro-box {
+            background: linear-gradient(135deg, rgba(252,205,6,0.1) 0%, rgba(37,215,242,0.1) 100%);
+            border-left: 4px solid var(--brand-gold);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .intro-box h3 {
+            color: var(--brand-dark-blue);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            text-align: left;
+        }
+
+        .intro-box ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .intro-box li {
+            margin-bottom: 10px;
+        }
+
+        /* AI Prompt Collapsible */
+        details.prompt-collapsible {
+            background: white;
+            border: 2px solid var(--brand-gold);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        details.prompt-collapsible summary {
+            cursor: pointer;
+            list-style: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: var(--brand-dark-blue);
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        details.prompt-collapsible summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.prompt-collapsible summary .toggle-indicator {
+            font-size: 1rem;
+            color: var(--brand-gold);
+        }
+
+        details.prompt-collapsible[open] summary .toggle-indicator::before {
+            content: "▲ Click to collapse";
+        }
+
+        details.prompt-collapsible:not([open]) summary .toggle-indicator::before {
+            content: "▼ Click to expand";
+        }
+
+        .prompt-content-wrapper {
+            margin-top: 20px;
+        }
+
+        .prompt-box {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            background: var(--brand-gold);
+            color: var(--brand-dark-blue);
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Brand Personality Cards */
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .personality-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .personality-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .personality-card:nth-child(1) { border-top: 4px solid var(--brand-gold); }
+        .personality-card:nth-child(2) { border-top: 4px solid var(--brand-cyan); }
+        .personality-card:nth-child(3) { border-top: 4px solid var(--brand-purple); }
+        .personality-card:nth-child(4) { border-top: 4px solid var(--brand-teal); }
+        .personality-card:nth-child(5) { border-top: 4px solid var(--brand-coral); }
+        .personality-card:nth-child(6) { border-top: 4px solid var(--brand-dark-blue); }
+
+        .personality-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .personality-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .personality-card:nth-child(1) h3 { color: var(--brand-gold); }
+        .personality-card:nth-child(2) h3 { color: var(--brand-cyan); }
+        .personality-card:nth-child(3) h3 { color: var(--brand-purple); }
+        .personality-card:nth-child(4) h3 { color: var(--brand-teal); }
+        .personality-card:nth-child(5) h3 { color: var(--brand-coral); }
+        .personality-card:nth-child(6) h3 { color: var(--brand-dark-blue); }
+
+        .personality-card p {
+            color: var(--brand-text);
+            margin: 0;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .color-swatch {
+            text-align: center;
+        }
+
+        .color-box {
+            height: 180px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .color-box:hover {
+            transform: scale(1.05);
+        }
+
+        .color-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--brand-dark-blue);
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            color: var(--brand-text);
+            font-size: 0.95rem;
+        }
+
+        /* Typography Section */
+        .typography-example {
+            margin: 30px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .type-h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .type-h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .type-h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .type-body {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-text);
+            line-height: 1.7;
+        }
+
+        /* Logo Usage */
+        .logo-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .logo-example {
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .logo-example.light-bg {
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .logo-example.dark-bg {
+            background: var(--brand-dark-blue);
+        }
+
+        .logo-example img {
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .logo-example.dark-bg img {
+            filter: brightness(0) invert(1);
+        }
+
+        .logo-example p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .logo-example.light-bg p {
+            color: var(--brand-text);
+        }
+
+        .logo-example.dark-bg p {
+            color: white;
+        }
+
+        /* Design Elements */
+        .button-examples {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background: var(--brand-gold);
+            color: var(--brand-dark-blue);
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary:hover {
+            background: var(--brand-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--brand-dark-blue);
+            border: 2px solid var(--brand-dark-blue);
+            padding: 13px 28px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--brand-dark-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Style Suggestions */
+        .style-suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .style-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .style-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .style-card:nth-child(1) { border-left: 4px solid var(--brand-gold); }
+        .style-card:nth-child(2) { border-left: 4px solid var(--brand-cyan); }
+        .style-card:nth-child(3) { border-left: 4px solid var(--brand-purple); }
+        .style-card:nth-child(4) { border-left: 4px solid var(--brand-teal); }
+        .style-card:nth-child(5) { border-left: 4px solid var(--brand-coral); }
+
+        .style-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .style-card:nth-child(1) h3 { color: var(--brand-gold); }
+        .style-card:nth-child(2) h3 { color: var(--brand-cyan); }
+        .style-card:nth-child(3) h3 { color: var(--brand-purple); }
+        .style-card:nth-child(4) h3 { color: var(--brand-teal); }
+        .style-card:nth-child(5) h3 { color: var(--brand-coral); }
+
+        .style-card p {
+            color: var(--brand-text);
+            margin-bottom: 15px;
+        }
+
+        .style-prompt {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Key Messaging */
+        .value-props {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .value-props li {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--brand-gold);
+        }
+
+        .value-props li:nth-child(even) {
+            border-left-color: var(--brand-cyan);
+        }
+
+        /* Writing Style Do's and Don'ts */
+        .writing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .writing-column {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .writing-column h3 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .writing-column.do {
+            border-top: 4px solid #4caf50;
+        }
+
+        .writing-column.dont {
+            border-top: 4px solid #f44336;
+        }
+
+        .writing-column.do h3 {
+            color: #4caf50;
+        }
+
+        .writing-column.dont h3 {
+            color: #f44336;
+        }
+
+        .writing-column ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .writing-column li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .writing-column li:last-child {
+            border-bottom: none;
+        }
+
+        .writing-column.do li::before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .writing-column.dont li::before {
+            content: "✗ ";
+            color: #f44336;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-dark-blue);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Tagline Section */
+        .tagline-section {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-cyan) 50%, var(--brand-purple) 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .tagline-section h2 {
+            color: white;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header .subtitle {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .writing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .type-h1 {
+                font-size: 2.2rem;
+            }
+
+            .type-h2 {
+                font-size: 1.9rem;
+            }
+
+            .type-h3 {
+                font-size: 1.6rem;
+            }
+
+            .tagline-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Innovantage Collaborative Logo" class="logo">
+        <h1>Innovantage Collaborative</h1>
+        <p class="subtitle">Brand Guidelines</p>
+        <p class="attribution">Prepared for Nakia D. Whittaker by Innovation Bound</p>
+    </header>
+
+    <!-- Introduction -->
+    <section>
+        <div class="container">
+            <div class="intro-box">
+                <h3>📌 How to Use These Brand Guidelines with AI</h3>
+                <p>Two features below help you maintain brand consistency when using AI tools:</p>
+                <ol>
+                    <li><strong>AI Brand Prompt</strong> (collapsed section below) — Copy this into ChatGPT to ensure AI-generated content follows your brand guidelines</li>
+                    <li><strong>AI Image Style Suggestions</strong> (scroll down) — Pre-written prompts for AI image generators, no design degree required</li>
+                </ol>
+                <p>This is 1 of 5 Customized AI Demos prepared for your business.</p>
+            </div>
+
+            <!-- AI Brand Prompt (Collapsed) -->
+            <details class="prompt-collapsible">
+                <summary>
+                    AI Brand Prompt
+                    <span class="toggle-indicator"></span>
+                </summary>
+                <div class="prompt-content-wrapper">
+                    <p>Copy this prompt and paste it into ChatGPT or another AI tool to ensure generated content matches your brand:</p>
+                    <button class="copy-btn" data-copy-target="ai-brand-prompt">Click to Copy Prompt</button>
+                    <div class="prompt-box">
+                        <pre id="ai-brand-prompt">You are helping Innovantage Collaborative, a multi-brand ecosystem for female founders and entrepreneurs. Follow these brand guidelines:
+
+**Brand Colors:**
+- Primary Gold: #FCCD06
+- Cyan: #25D7F2
+- Dark Blue: #0057AE (professional anchor)
+- Purple: #aa2377
+- Teal: #22d0c7
+- Coral Red: #ff6e6e
+
+**Typography:**
+- Body Font: Nunito Sans (or Transat alternative)
+- Heading Font: Poppins (or Quiche alternative)
+- Navigation: Lato
+
+**Brand Personality:**
+- Empowering and authentic
+- Vibrant and energetic
+- Professional with personality
+- Inclusive and community-focused
+- Modern and accessible
+
+**Key Messages:**
+- "Simplify. Dream. Transform. Lead. Empower."
+- "It's more than a Journey...it's your Legacy."
+- Authentic empowerment for female founders
+- Real advice "for us" (women entrepreneurs)
+- Building legacy, not just business
+- Community and transformative relationships
+
+**Writing Style:**
+- Professional yet accessible and relatable
+- Empowering and inspiring
+- Address women entrepreneurs directly
+- Use authentic, real language (avoid corporate speak)
+- Balance professionalism with personality
+- Focus on transformation and legacy building
+
+**DO:**
+- Speak directly to female founders
+- Use empowering, authentic language
+- Highlight community and relationships
+- Focus on transformation and legacy
+- Keep it accessible and relatable
+- Celebrate diversity and inclusion
+
+**DON'T:**
+- Use overly corporate or generic business jargon
+- Sound intimidating or exclusionary
+- Ignore the authentic, real advice angle
+- Make it all about transactions instead of relationships
+- Use language that doesn't resonate with women entrepreneurs</pre>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Brand Overview -->
+    <section>
+        <div class="container">
+            <h2>Brand Overview</h2>
+            <h3>Innovantage Collaborative</h3>
+            <p><strong>Personal Brand:</strong> Nakia D. Whittaker</p>
+            <p><strong>Tagline:</strong> "Simplify. Dream. Transform. Lead. Empower."</p>
+            <p><strong>Industry:</strong> Multi-brand ecosystem for women entrepreneurs</p>
+            <p><strong>Services:</strong> Virtual assistance, mentorship, networking, and education</p>
+            <p><strong>Mission:</strong> Uplifting female founders through authenticity, shifting paradigms, and leveraging transformative relationships. We address the question: "Where was the authentic and real advice for us?"</p>
+            <p><strong>Core Message:</strong> It's more than a Journey...it's your Legacy.</p>
+            <p><strong>Target Market:</strong> Female founders and entrepreneurs, particularly those in remote/digital-first sectors and minority-owned businesses seeking accessible resources and community support</p>
+        </div>
+    </section>
+
+    <!-- Brand Personality -->
+    <section>
+        <div class="container">
+            <h2>Brand Personality</h2>
+            <div class="personality-grid">
+                <div class="personality-card">
+                    <div class="icon">💪</div>
+                    <h3>Empowering</h3>
+                    <p>We uplift female founders through authentic empowerment and real guidance</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">✨</div>
+                    <h3>Authentic</h3>
+                    <p>Real advice for us, by us - no generic business platitudes</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🚀</div>
+                    <h3>Transformative</h3>
+                    <p>We focus on legacy building, not just business transactions</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🤝</div>
+                    <h3>Community-Focused</h3>
+                    <p>Building transformative relationships and connections</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🎨</div>
+                    <h3>Vibrant</h3>
+                    <p>Modern, energetic design with personality and flair</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🌟</div>
+                    <h3>Professional</h3>
+                    <p>Accessible expertise for female entrepreneurs at every stage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tagline Divider -->
+    <div class="tagline-section">
+        <h2>Simplify. Dream. Transform. Lead. Empower.</h2>
+    </div>
+
+    <!-- Color Palette -->
+    <section>
+        <div class="container">
+            <h2>Color Palette</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Vibrant, energetic colors that represent empowerment and transformation:</p>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #FCCD06;"></div>
+                    <p class="color-name">Primary Gold</p>
+                    <p class="color-hex">#FCCD06</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #25D7F2;"></div>
+                    <p class="color-name">Cyan</p>
+                    <p class="color-hex">#25D7F2</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #0057AE;"></div>
+                    <p class="color-name">Dark Blue</p>
+                    <p class="color-hex">#0057AE</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #aa2377;"></div>
+                    <p class="color-name">Purple</p>
+                    <p class="color-hex">#aa2377</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #22d0c7;"></div>
+                    <p class="color-name">Teal</p>
+                    <p class="color-hex">#22d0c7</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #ff6e6e;"></div>
+                    <p class="color-name">Coral Red</p>
+                    <p class="color-hex">#ff6e6e</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+        <div class="container">
+            <h2>Typography</h2>
+            <div class="typography-example">
+                <h1 class="type-h1">Heading 1 - Poppins</h1>
+                <h2 class="type-h2">Heading 2 - Poppins</h2>
+                <h3 class="type-h3">Heading 3 - Poppins</h3>
+                <p class="type-body">Body Text - Nunito Sans, 1.5rem, line-height 1.7. This is how regular paragraphs and content will appear throughout Innovantage Collaborative's materials.</p>
+            </div>
+            <p style="margin-top: 30px;"><strong>Font Stack:</strong></p>
+            <ul style="margin-left: 40px;">
+                <li><strong>Headings:</strong> 'Poppins', sans-serif (Google Fonts - similar to Quiche)</li>
+                <li><strong>Body:</strong> 'Nunito Sans', 'Merriweather Sans', Arial, sans-serif (Google Fonts - similar to Transat)</li>
+                <li><strong>Navigation:</strong> 'Lato', sans-serif</li>
+            </ul>
+            <p style="margin-top: 20px;"><em>Note: The website uses custom fonts (Quiche-flare for headings, Transat for body). These Google Fonts alternatives provide similar modern, clean aesthetics.</em></p>
+        </div>
+    </section>
+
+    <!-- Logo Usage -->
+    <section>
+        <div class="container">
+            <h2>Logo Usage</h2>
+            <p style="text-align: center; margin-bottom: 30px;">The Innovantage Collaborative logo should maintain consistent spacing and visibility across all backgrounds:</p>
+            <div class="logo-examples">
+                <div class="logo-example light-bg">
+                    <img src="logo.png" alt="Logo on light background">
+                    <p>Logo on light background</p>
+                </div>
+                <div class="logo-example dark-bg">
+                    <img src="logo.png" alt="Logo on dark background">
+                    <p>Logo on dark background (inverted)</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px;"><strong>Usage Guidelines:</strong></p>
+            <ul style="margin-left: 40px;">
+                <li>Maintain adequate spacing around the logo (minimum 40px)</li>
+                <li>Use the full-color version on light backgrounds</li>
+                <li>Use the inverted (white) version on dark backgrounds</li>
+                <li>Don't distort, stretch, or alter the logo proportions</li>
+                <li>Maintain legibility at all sizes (minimum 120px width)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Design Elements -->
+    <section>
+        <div class="container">
+            <h2>Design Elements</h2>
+            <h3>Buttons</h3>
+            <div class="button-examples">
+                <button class="btn-primary">Primary Button</button>
+                <button class="btn-secondary">Secondary Button</button>
+            </div>
+
+            <h3 style="margin-top: 50px;">Design Patterns</h3>
+            <ul style="margin-left: 40px;">
+                <li><strong>Vibrant gradients</strong> using brand colors (gold to cyan, multi-color)</li>
+                <li><strong>Box shadows</strong> for depth (0 4px 12px rgba(0,0,0,0.1))</li>
+                <li><strong>Border radius</strong> of 12px for modern, friendly feel</li>
+                <li><strong>Colorful accent borders</strong> (4px solid) in various brand colors</li>
+                <li><strong>Hover effects</strong> with transform and color transitions</li>
+                <li><strong>Clean, minimalist layout</strong> with ample whitespace</li>
+                <li><strong>Responsive grid layouts</strong> for flexible content display</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AI Image Style Suggestions -->
+    <section>
+        <div class="container">
+            <h2>Style Suggestions for AI Generated Images</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Use these style prompts with AI image generators like DALL-E, Midjourney, or Stable Diffusion to create images that match Innovantage Collaborative's vibrant, empowering brand.</p>
+
+            <div class="style-suggestions-grid">
+                <div class="style-card">
+                    <h3>Modern Flat Illustration</h3>
+                    <p>For vibrant, energetic graphics that feel empowering</p>
+                    <div id="style-1" class="style-prompt">Use a modern flat illustration style with a vibrant color palette (golden yellow #FCCD06, cyan #25D7F2). Add decorative dots and circles with geometric shapes and clean lines. Make it playful and energetic with a vector art style. Keep it professional but fun.</div>
+                    <button class="copy-btn" data-copy-target="style-1">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Gradient Backgrounds</h3>
+                    <p>For eye-catching headers and accent sections</p>
+                    <div id="style-2" class="style-prompt">Use smooth gradient backgrounds transitioning between brand colors: golden yellow (#FCCD06) to cyan (#25D7F2) to purple (#aa2377). Make it vibrant and modern with subtle texture overlays. Keep it professional with smooth color blending. Add depth without overwhelming the design.</div>
+                    <button class="copy-btn" data-copy-target="style-2">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Diverse Professional Photography</h3>
+                    <p>For authentic, relatable imagery</p>
+                    <div id="style-3" class="style-prompt">Use professional photography with warm, natural lighting and authentic expressions. Incorporate vibrant pops of color using brand palette (gold #FCCD06, cyan #25D7F2). Keep it modern and clean with diverse representation. Make it inspiring and empowering with high-quality photographic style.</div>
+                    <button class="copy-btn" data-copy-target="style-3">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Minimalist Geometric</h3>
+                    <p>For clean infographics and icons</p>
+                    <div id="style-4" class="style-prompt">Use minimalist geometric design with clean lines and simple shapes. Incorporate brand colors: gold (#FCCD06), cyan (#25D7F2), dark blue (#0057AE). Make it modern and professional with flat design principles. Use ample whitespace and subtle shadows for depth.</div>
+                    <button class="copy-btn" data-copy-target="style-4">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Energetic Abstract</h3>
+                    <p>For dynamic backgrounds and accent elements</p>
+                    <div id="style-5" class="style-prompt">Use abstract flowing shapes and curves with vibrant color combinations (gold #FCCD06, cyan #25D7F2, purple #aa2377, teal #22d0c7). Make it dynamic and energetic with gradient overlays. Keep it modern and professional with smooth transitions. Add movement and visual interest without being overwhelming.</div>
+                    <button class="copy-btn" data-copy-target="style-5">Click to Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section style="background: linear-gradient(135deg, var(--brand-purple) 0%, var(--brand-dark-blue) 100%); padding: 40px 20px;">
+        <div class="container">
+            <h2 style="color: white; margin: 0;">Brand Voice</h2>
+        </div>
+    </section>
+
+    <!-- Key Messaging -->
+    <section>
+        <div class="container">
+            <h2>Key Messaging</h2>
+            <p><strong>Tagline:</strong> "Simplify. Dream. Transform. Lead. Empower."</p>
+            <p><strong>Core Message:</strong> It's more than a Journey...it's your Legacy.</p>
+
+            <h3 style="margin-top: 40px;">Value Propositions</h3>
+            <ul class="value-props">
+                <li>Authentic empowerment for female founders - real advice "for us"</li>
+                <li>Multi-brand ecosystem providing virtual assistance, mentorship, networking, and education</li>
+                <li>Building legacy and transformative relationships, not just transactions</li>
+                <li>Accessible resources and community support for women entrepreneurs</li>
+                <li>Shifting paradigms and creating new possibilities for female-led businesses</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Target Audience</h3>
+            <p>Female founders and entrepreneurs at all stages of their journey. They value authenticity, community, and real guidance. They're building legacies, not just businesses. They seek accessible, relatable support from people who understand their unique challenges as women in business.</p>
+        </div>
+    </section>
+
+    <!-- Writing Style -->
+    <section>
+        <div class="container">
+            <h2>Writing Style</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;"><strong>Tone:</strong> Professional yet accessible, empowering, authentic, relatable, inspiring, community-focused</p>
+
+            <div class="writing-grid">
+                <div class="writing-column do">
+                    <h3>✓ DO</h3>
+                    <ul>
+                        <li>Speak directly to female founders and entrepreneurs</li>
+                        <li>Use authentic, real language (avoid corporate jargon)</li>
+                        <li>Focus on transformation and legacy building</li>
+                        <li>Highlight community and transformative relationships</li>
+                        <li>Balance professionalism with approachability</li>
+                        <li>Celebrate diversity and inclusion</li>
+                        <li>Emphasize empowerment and authenticity</li>
+                    </ul>
+                </div>
+                <div class="writing-column dont">
+                    <h3>✗ DON'T</h3>
+                    <ul>
+                        <li>Use overly corporate or generic business jargon</li>
+                        <li>Sound intimidating or exclusionary</li>
+                        <li>Ignore the "real advice for us" positioning</li>
+                        <li>Make it transactional instead of relational</li>
+                        <li>Use language that doesn't resonate with women</li>
+                        <li>Downplay the importance of authenticity</li>
+                        <li>Forget to emphasize legacy over short-term gains</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">Example Copy</h3>
+            <div class="typography-example">
+                <p><strong>Good:</strong> "You're not just building a business - you're creating a legacy. We get it because we've been there. Our community provides the authentic, real advice that's often missing when you're navigating entrepreneurship as a woman."</p>
+                <p><strong>Avoid:</strong> "Innovantage Collaborative provides comprehensive business services to optimize your operational efficiency and maximize ROI through strategic partnerships and synergistic solutions."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Guidelines -->
+    <section>
+        <div class="container">
+            <h2>Usage Guidelines</h2>
+            <h3>Brand Consistency</h3>
+            <ul style="margin-left: 40px;">
+                <li>Use the vibrant multi-color palette strategically - gold (#FCCD06) as primary</li>
+                <li>Use Poppins for headings and Nunito Sans for body text (or original custom fonts)</li>
+                <li>Maintain empowering, authentic tone in all communications</li>
+                <li>Ensure diverse representation of women entrepreneurs in all imagery</li>
+                <li>Keep messaging focused on legacy, transformation, and community</li>
+                <li>Use gradients and vibrant colors to convey energy and empowerment</li>
+                <li>Apply 12px border radius for modern, friendly feel</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Visual Applications</h3>
+            <ul style="margin-left: 40px;">
+                <li>Use gradient backgrounds for headers and key sections</li>
+                <li>Rotate through brand colors for accents and highlights</li>
+                <li>Apply hover effects and transitions for interactive elements</li>
+                <li>Maintain clean, minimalist layouts with ample whitespace</li>
+                <li>Use colorful borders (4px) to add vibrancy to cards and sections</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Photography Guidelines</h3>
+            <ul style="margin-left: 40px;">
+                <li>Feature diverse women entrepreneurs authentically</li>
+                <li>Use modern, professional imagery with vibrant color pops</li>
+                <li>Show collaboration, empowerment, and transformation</li>
+                <li>Avoid overly staged or stock-looking photography</li>
+                <li>Ensure authentic representation and relatable scenarios</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Digital Applications</h3>
+            <ul style="margin-left: 40px;">
+                <li>Ensure mobile responsiveness in all designs</li>
+                <li>Use gold (#FCCD06) for primary call-to-action buttons</li>
+                <li>Maintain adequate contrast for accessibility</li>
+                <li>Apply smooth transitions and hover effects</li>
+                <li>Use box shadows (0 4px 12px rgba(0,0,0,0.1)) for depth</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Innovantage Collaborative</strong></p>
+            <p>Nakia D. Whittaker</p>
+            <p>Empowering Female Founders</p>
+            <p style="margin-top: 30px;" class="credit">Brand Guidelines prepared by Innovation Bound</p>
+            <p class="credit">Generated: October 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Click-to-copy functionality
+        function copyToClipboard (text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                var originalText = button.textContent
+                button.textContent = 'Copied!'
+                button.style.background = '#4caf50'
+                button.style.color = 'white'
+
+                setTimeout(function() {
+                    button.textContent = originalText
+                    button.style.background = ''
+                    button.style.color = ''
+                }, 2000)
+            }).catch(function(err) {
+                console.error('Failed to copy:', err)
+                alert('Copy failed. Please try selecting and copying manually.')
+            })
+        }
+
+        // Add click handlers to all copy buttons
+        document.querySelectorAll('.copy-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var targetId = this.getAttribute('data-copy-target')
+                var textElement = document.getElementById(targetId)
+                var textToCopy = textElement.textContent || textElement.innerText
+                copyToClipboard(textToCopy, this)
+            })
+        })
+    </script>
+</body>
+</html>

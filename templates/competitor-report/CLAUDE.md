@@ -2,6 +2,22 @@
 
 Instructions for building personalized competitor analysis reports with automated tracking.
 
+## ⚠️ CRITICAL: Use Client's Brand Guidelines
+
+**This deliverable must follow the client's brand guidelines created in deliverable #1.**
+
+Before starting, READ:
+- `../brand-guidelines/index.html` - See their colors, fonts, and design patterns
+- `../../research/brand-research.md` - Review documented brand details
+
+Use their:
+- **Colors** (exact hex codes from brand guidelines)
+- **Fonts** (same font families)
+- **Design patterns** (buttons, cards, spacing that matches their brand)
+- **Visual style** (professional, playful, technical, etc.)
+
+**DO NOT use generic Innovation Bound styling or make up your own colors/fonts.**
+
 ## Overview
 
 Build a single-page HTML website that identifies the client's top competitors and provides a ChatGPT Schedules prompt for weekly automated competitor monitoring. The report analyzes competitors based on the client's specific market positioning.
@@ -9,7 +25,7 @@ Build a single-page HTML website that identifies the client's top competitors an
 ## Output
 
 Self-contained HTML file with:
-- Inline CSS matching their brand (colors, fonts from brand guidelines research)
+- Inline CSS matching their brand (colors, fonts from brand guidelines)
 - Analysis of what problem they solve and for whom
 - 5-8 top competitors with brief profiles
 - ChatGPT Schedules prompt for weekly competitor tracking (click-to-copy)
@@ -264,47 +280,43 @@ function copyPrompt () {
 </script>
 ```
 
-## Phase 6: Styling with Brand
+## Phase 6: Styling with Client's Brand
 
-### 6.1 Use Brand Colors
+### 6.1 Extract Colors from Brand Guidelines
+
+Open `../brand-guidelines/index.html` and copy the exact CSS variables:
 
 ```css
 :root {
-  --primary-color: #hexcode; /* From brand guidelines */
+  /* Copy these EXACT values from brand-guidelines/index.html */
+  --primary-color: #hexcode;
   --secondary-color: #hexcode;
   --accent-color: #hexcode;
-}
-
-.competitor-card {
-  border-left: 4px solid var(--accent-color);
-  padding: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.copy-btn {
-  background: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1.1rem;
+  /* Add any other colors they defined */
 }
 ```
 
-### 6.2 Use Brand Fonts
+Apply to cards, buttons, and interactive elements to match their brand.
+
+### 6.2 Use Their Fonts
+
+Copy the exact Google Fonts link and font-family from brand-guidelines:
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=FontName&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=TheirFont&display=swap" rel="stylesheet">
 
 <style>
 body {
-  font-family: 'FontName', Arial, sans-serif;
+  font-family: 'TheirFont', Arial, sans-serif; /* Use their actual font */
 }
 </style>
 ```
+
+### 6.3 Match Their Design Patterns
+
+Look at how cards, buttons, and spacing are styled in brand-guidelines, then replicate that aesthetic.
+
+**IMPORTANT:** Don't use generic CSS patterns. Study their brand guidelines and create CSS that matches THEIR visual style.
 
 ## Success Criteria
 

@@ -2,6 +2,18 @@
 
 Instructions for building personalized brand guidelines websites using Claude Code.
 
+## ⚠️ CRITICAL: Extract Client's ACTUAL Brand
+
+**DO NOT use Innovation Bound's brand or any prescriptive styling!**
+
+This deliverable must:
+- Extract the client's ACTUAL colors from their website CSS
+- Use the client's ACTUAL fonts
+- Use the client's ACTUAL logo
+- Match the client's ACTUAL brand personality
+
+**The brand guidelines you create will be used as the source for styling ALL other deliverables (100 ideas, competitor report, writing guide, podcast list).**
+
 ## Overview
 
 Build a single-page HTML website that showcases a company's actual brand guidelines while following those same guidelines. Extract real brand data (logo, colors, fonts, messaging) from their website and present it in a professional, polished format.
@@ -159,7 +171,7 @@ Create `research/brand-research.md` with all findings:
 
 Copy `templates/brand-guidelines/index.html` to:
 ```
-deliverables/brand-guidelines-for-{email-slug}/index.html
+deliverables/brand-guidelines/index.html
 ```
 
 ### 2.2 HTML Structure Requirements
@@ -296,6 +308,8 @@ This is 1 of 5 Customized AI Demos prepared for your business.
 - Primary font family
 - Font hierarchy (h1, h2, h3, body)
 - Live typography examples (actual headings and text)
+- **IMPORTANT:** Typography examples must be LEFT-ALIGNED (not centered) so readers can see the actual font styling
+- If you need centered headings elsewhere on the page, use a specific class like `.centered-heading`, don't apply `text-align: center` to all h1, h2, h3 tags globally
 
 ### 9. Logo Usage
 - Logo on white background
@@ -354,14 +368,14 @@ This is 1 of 5 Customized AI Demos prepared for your business.
 
 ```bash
 cd ../../tools
-node screenshot.js ../client-folders/{email-slug}/deliverables/brand-guidelines-for-{email-slug}/index.html
+node screenshot.js ../client-folders/{email-slug}/deliverables/brand-guidelines/index.html
 ```
 
 ### 4.2 Review Screenshot
 
 Use Read tool to view the screenshot:
 ```
-Read(file_path: "client-folders/{email-slug}/deliverables/brand-guidelines-for-{email-slug}/screenshots/preview.png")
+Read(file_path: "client-folders/{email-slug}/deliverables/brand-guidelines/screenshots/preview.png")
 ```
 
 ### 4.3 Check For Issues
@@ -386,15 +400,15 @@ Fix any issues in the HTML/CSS, then regenerate screenshot. **Repeat until perfe
 ### 5.1 Copy Logo
 
 ```bash
-cp research/logo.png deliverables/brand-guidelines-for-{email-slug}/logo.png
+cp research/logo.png deliverables/brand-guidelines/logo.png
 ```
 
 ### 5.2 Copy Custom Fonts (If Needed)
 
 Only if Google Fonts doesn't have the font:
 ```bash
-mkdir deliverables/brand-guidelines-for-{email-slug}/fonts
-cp research/fonts/* deliverables/brand-guidelines-for-{email-slug}/fonts/
+mkdir deliverables/brand-guidelines/fonts
+cp research/fonts/* deliverables/brand-guidelines/fonts/
 ```
 
 Update HTML to reference local fonts:
@@ -528,14 +542,36 @@ details.prompt-collapsible[open] .toggle-indicator::before {
 - Use browser dev tools if needed
 - Define as CSS variables for consistency
 
+**Typography Examples Centered (h2 centered but h1/h3 not):**
+- Don't apply `text-align: center` to h1, h2, h3 tags globally
+- Typography section must show LEFT-ALIGNED examples so readers see the actual font styling
+- If you need centered headings elsewhere, use a specific class like `.hero-heading { text-align: center; }`
+
 ## Generating AI Image Style Suggestions
 
-For the "Style Suggestions for AI Generated Images" section, create 4-6 suggestions tailored to:
+For the "Style Suggestions for AI Generated Images" section, create 4-6 suggestions tailored to the client's brand. Each style suggestion must be:
 
+**IMPORTANT FORMAT REQUIREMENTS:**
+1. **Instructional Tone** - Write as clear instructions, not keyword lists
+2. **Style-Focused** - Focus ONLY on visual style, not composition or content
+3. **Conversational** - Use natural language: "Use a...", "Keep it...", "Make it..."
+4. **No Subjects** - Don't mention people, objects, or scenes (that's composition, not style)
+
+**Good Example:**
+```
+Use a modern flat illustration style with a vibrant color palette (golden yellow #FCCD06, cyan #25D7F2). Add decorative dots and circles with geometric shapes and clean lines. Make it playful and energetic with a vector art style. Keep it professional but fun.
+```
+
+**Bad Example (keyword-stuffed, includes composition):**
+```
+diverse group of women at laptop, vibrant colors, golden yellow, cyan, modern coworking space, colorful decorative elements, professional photography style
+```
+
+**What to Include in Style Suggestions:**
 1. **Brand Personality:** Match the tone (professional, playful, technical, artistic, etc.)
-2. **Industry:** Consider what imagery they typically need
-3. **Brand Colors:** Suggest styles that work with their palette
-4. **Target Audience:** What resonates with their customers
+2. **Industry Appropriateness:** Consider what visual styles fit their industry
+3. **Brand Colors:** Always reference their actual hex codes from brand guidelines
+4. **Visual Techniques:** Mention lighting, textures, art styles, but NOT specific subjects
 
 ## Final Steps
 

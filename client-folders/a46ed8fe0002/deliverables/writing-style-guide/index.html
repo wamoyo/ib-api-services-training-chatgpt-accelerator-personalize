@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Style Guide for Best Thrive</title>
+
+    <!-- Google Fonts - Match Brand Guidelines -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Best Thrive Brand Colors */
+            --brand-primary: #cc9e00;
+            --brand-primary-hover: #ffc500;
+            --brand-text: #737373;
+            --brand-heading: #4d4d4d;
+            --brand-background: #ffffff;
+            --brand-accent-bg: #fff9e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--brand-heading);
+            margin-bottom: 10px;
+        }
+
+        /* Intro Box */
+        .intro {
+            background: var(--brand-accent-bg);
+            border-left: 4px solid var(--brand-primary);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        /* Voice Cards */
+        .voice-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .voice-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--brand-primary);
+        }
+
+        .voice-card h3 {
+            color: var(--brand-primary);
+            margin-bottom: 15px;
+        }
+
+        /* Characteristics */
+        .characteristic {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .example {
+            background: var(--brand-accent-bg);
+            padding: 20px;
+            border-left: 3px solid var(--brand-primary);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Guidelines Grid */
+        .guidelines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .do-column, .dont-column {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .do-column {
+            border-top: 4px solid #4caf50;
+        }
+
+        .do-column h3 {
+            color: #4caf50;
+        }
+
+        .dont-column {
+            border-top: 4px solid #f44336;
+        }
+
+        .dont-column h3 {
+            color: #f44336;
+        }
+
+        .guidelines-grid ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .guidelines-grid li {
+            margin-bottom: 10px;
+        }
+
+        /* Example Cards */
+        .example-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .before, .after {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .before {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+        }
+
+        .before h4 {
+            color: #f44336;
+        }
+
+        .after {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+
+        .after h4 {
+            color: #4caf50;
+        }
+
+        /* Instructions Box */
+        .instructions {
+            background: var(--brand-accent-bg);
+            border-left: 4px solid var(--brand-primary);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .instructions ol {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        /* Prompt Box */
+        .prompt-box {
+            background: white;
+            border: 2px solid var(--brand-primary);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-heading);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .voice-cards,
+            .guidelines-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .example-card {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Writing Style Guide for Best Thrive</h1>
+        <p class="subtitle">Brand Voice & AI Content Guidelines | Prepared by Innovation Bound</p>
+    </header>
+
+    <!-- Introduction -->
+    <section>
+        <div class="container">
+            <div class="intro">
+                <h2 style="text-align: left; font-size: 1.8rem; margin-bottom: 15px;">📝 Using This Guide with AI</h2>
+                <p>This guide captures your brand's writing style based on your website content. Use the AI prompt at the bottom to ensure ChatGPT and other AI tools match your voice when creating content for Best Thrive.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Overview -->
+    <section>
+        <div class="container">
+            <h2>Your Brand Voice</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Best Thrive's voice is warm, inclusive, and empowering—celebrating the joy of learning while building confidence in every child.</p>
+
+            <div class="voice-cards">
+                <div class="voice-card">
+                    <h3>Uplifting & Empowering</h3>
+                    <p>Your language focuses on transformation and potential. Every message reinforces that children can thrive and succeed, building self-esteem alongside academic skills.</p>
+                </div>
+
+                <div class="voice-card">
+                    <h3>Warm & Approachable</h3>
+                    <p>You write with genuine warmth, creating a welcoming environment for parents and children. Your tone is never intimidating or overly formal.</p>
+                </div>
+
+                <div class="voice-card">
+                    <h3>Inclusive & Representative</h3>
+                    <p>You emphasize diversity and representation authentically, making it clear that every child deserves to see themselves in their learning materials.</p>
+                </div>
+
+                <div class="voice-card">
+                    <h3>Fun-Focused</h3>
+                    <p>You believe learning should be joyful. "Fun" is central to your mission, and your writing reflects the belief that engagement drives transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Characteristics -->
+    <section>
+        <div class="container">
+            <h2>Writing Characteristics</h2>
+
+            <div class="characteristic">
+                <h3>Tone</h3>
+                <p>Your overall tone is <strong>motivational yet approachable</strong>—like an educator who genuinely believes in every student's potential while keeping the experience enjoyable rather than pressured.</p>
+                <p class="example"><strong>Example from your site:</strong> "We believe in the power of fun to transform lives."</p>
+            </div>
+
+            <div class="characteristic">
+                <h3>Sentence Structure</h3>
+                <p>You mix <strong>short, punchy statements with longer descriptive sentences</strong>. Opening statements are brief and impactful, then you expand with details that paint a fuller picture.</p>
+                <p class="example"><strong>Example from your site:</strong> "Empowering children to thrive and succeed" (short) paired with "Our personalized approach helps children reach their full potential while learning with characters that look like you" (longer).</p>
+            </div>
+
+            <div class="characteristic">
+                <h3>Word Choice</h3>
+                <p>Your vocabulary is <strong>positive, empowerment-focused, and accessible</strong>. You use words like "thrive," "succeed," "transform," and "empower" while avoiding educational jargon that might alienate parents.</p>
+                <p class="example"><strong>Example from your site:</strong> "helping children thrive and succeed with high self-esteem while having fun"</p>
+            </div>
+
+            <div class="characteristic">
+                <h3>Perspective</h3>
+                <p>You write in <strong>first person plural (we/our)</strong> to create an inclusive, community feel. This builds trust and positions Best Thrive as a partner in each child's journey.</p>
+                <p class="example"><strong>Example from your site:</strong> "At Best Thrive, we believe in the power of fun to transform lives."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing Guidelines -->
+    <section>
+        <div class="container">
+            <h2>Writing Guidelines</h2>
+
+            <div class="guidelines-grid">
+                <div class="do-column">
+                    <h3>✓ DO</h3>
+                    <ul>
+                        <li>Use positive, empowering language (thrive, succeed, transform)</li>
+                        <li>Emphasize both academic growth AND emotional wellbeing</li>
+                        <li>Mention fun and engagement frequently</li>
+                        <li>Reference diversity and representation authentically</li>
+                        <li>Write with warmth and genuine belief in children's potential</li>
+                        <li>Use "we" to create community and partnership</li>
+                        <li>Keep language simple and accessible</li>
+                        <li>Balance short and longer sentences for rhythm</li>
+                    </ul>
+                </div>
+
+                <div class="dont-column">
+                    <h3>✗ DON'T</h3>
+                    <ul>
+                        <li>Use educational jargon or overly academic language</li>
+                        <li>Focus only on test scores or academic achievement</li>
+                        <li>Write in a stiff, corporate tone</li>
+                        <li>Make diversity feel performative or tokenized</li>
+                        <li>Use pressure-focused language ("must," "should," "need to")</li>
+                        <li>Write long, dense paragraphs</li>
+                        <li>Use passive voice</li>
+                        <li>Minimize the importance of fun and engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice in Action -->
+    <section>
+        <div class="container">
+            <h2>Voice in Action</h2>
+
+            <div class="example-card">
+                <div class="before">
+                    <h4>❌ Off-Brand</h4>
+                    <p>"Our organization provides supplemental educational instruction designed to optimize academic performance metrics through evidence-based pedagogical methodologies."</p>
+                </div>
+
+                <div class="after">
+                    <h4>✓ On-Brand</h4>
+                    <p>"We help children thrive academically while building confidence and self-esteem—because learning should be fun and personalized for every child."</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="before">
+                    <h4>❌ Off-Brand</h4>
+                    <p>"Students will be required to complete standardized assessments to measure proficiency levels across core subject areas."</p>
+                </div>
+
+                <div class="after">
+                    <h4>✓ On-Brand</h4>
+                    <p>"We track each child's progress to celebrate their growth and personalize their learning journey—ensuring they reach their full potential while having fun."</p>
+                </div>
+            </div>
+
+            <div class="example-card">
+                <div class="before">
+                    <h4>❌ Off-Brand</h4>
+                    <p>"Our curriculum incorporates multicultural elements to ensure inclusivity across diverse student populations."</p>
+                </div>
+
+                <div class="after">
+                    <h4>✓ On-Brand</h4>
+                    <p>"Children learn with characters that look like them—because representation matters, and every child deserves to see themselves in their education."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Prompt Section -->
+    <section>
+        <div class="container">
+            <h2>AI Writing Prompt</h2>
+
+            <div class="instructions">
+                <p><strong>How to use:</strong></p>
+                <ol>
+                    <li>Copy the prompt below</li>
+                    <li>Paste it into ChatGPT or your AI tool of choice</li>
+                    <li>Add your specific content request (e.g., "Write a blog post about...", "Create an email for parents about...")</li>
+                    <li>AI will generate content matching your brand voice</li>
+                </ol>
+            </div>
+
+            <button class="copy-btn" onclick="copyPrompt()">Click to Copy AI Prompt</button>
+
+            <div class="prompt-box">
+                <pre id="ai-prompt">Write all content for Best Thrive following these brand voice guidelines:
+
+COMPANY CONTEXT:
+Best Thrive is an educational tutoring and enrichment business in Rochester, New York, dedicated to helping children from diverse backgrounds thrive and succeed with high self-esteem while having fun. We believe in the power of fun to transform lives, offering personalized learning with diverse, representative characters that children can relate to.
+
+VOICE ATTRIBUTES:
+- Uplifting & Empowering: Focus on transformation and potential, building self-esteem alongside academic skills
+- Warm & Approachable: Write with genuine warmth, never intimidating or overly formal
+- Inclusive & Representative: Emphasize diversity and representation authentically
+- Fun-Focused: Learning should be joyful; engagement drives transformation
+
+TONE: Motivational yet approachable—like an educator who genuinely believes in every student's potential while keeping the experience enjoyable rather than pressured.
+
+WRITING STYLE:
+
+Sentence Structure:
+- Mix short, punchy statements with longer descriptive sentences
+- Opening statements should be brief and impactful
+- Expand with details that paint a fuller picture
+
+Word Choice:
+- Use positive, empowerment-focused language: "thrive," "succeed," "transform," "empower," "fun"
+- Keep vocabulary simple and accessible
+- Avoid educational jargon that might alienate parents
+- Emphasize both academic growth AND emotional wellbeing
+
+Perspective:
+- Write in first person plural (we/our) to create inclusive, community feel
+- Position Best Thrive as a partner in each child's journey
+
+Grammar & Mechanics:
+- Use contractions naturally for warmth (we're, you'll)
+- Active voice preferred
+- Balance short and longer sentences for rhythm
+
+DO:
+• Use positive, empowering language (thrive, succeed, transform)
+• Emphasize both academic growth AND emotional wellbeing
+• Mention fun and engagement frequently
+• Reference diversity and representation authentically
+• Write with warmth and genuine belief in children's potential
+• Use "we" to create community and partnership
+• Keep language simple and accessible
+
+DON'T:
+• Use educational jargon or overly academic language
+• Focus only on test scores or academic achievement
+• Write in a stiff, corporate tone
+• Make diversity feel performative or tokenized
+• Use pressure-focused language ("must," "should," "need to")
+• Write long, dense paragraphs
+• Use passive voice
+
+EXAMPLES OF OUR VOICE:
+✓ "We believe in the power of fun to transform lives."
+✓ "Our personalized approach helps children reach their full potential while learning with characters that look like you."
+✓ "helping children thrive and succeed with high self-esteem while having fun"
+✓ "Empowering children to thrive and succeed"
+
+When writing content, maintain this voice consistently. If you're unsure, err on the side of being more warm and empowering while keeping the focus on fun and personalized learning.</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Best Thrive</strong> - Empowering children to thrive and succeed</p>
+            <p class="credit">Prepared by Innovation Bound | This is 4 of 5 Customized AI Demos</p>
+        </div>
+    </footer>
+
+    <script>
+        // Side effect: Copies AI prompt to clipboard
+        function copyPrompt() {
+            var promptText = document.getElementById('ai-prompt').textContent;
+
+            navigator.clipboard.writeText(promptText).then(function() {
+                var btn = document.querySelector('.copy-btn');
+                var originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#4caf50';
+
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+    </script>
+</body>
+</html>

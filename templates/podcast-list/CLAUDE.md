@@ -2,6 +2,22 @@
 
 Instructions for building personalized podcast guest prospect lists with ready-to-send outreach messages and marketing training.
 
+## ⚠️ CRITICAL: Use Client's Brand Guidelines
+
+**This deliverable must follow the client's brand guidelines created in deliverable #1.**
+
+Before starting, READ:
+- `../brand-guidelines/index.html` - See their colors, fonts, and design patterns
+- `../../research/brand-research.md` - Review documented brand details
+
+Use their:
+- **Colors** (exact hex codes from brand guidelines)
+- **Fonts** (same font families)
+- **Design patterns** (buttons, cards, spacing that matches their brand)
+- **Visual style** (professional, playful, technical, etc.)
+
+**DO NOT use generic Innovation Bound styling or make up your own colors/fonts.**
+
 ## Overview
 
 Build a single-page HTML website that identifies 3-5 ideal podcast guests who are either target customers OR well-networked with target customers. For each prospect, find specific content they created, and draft a personalized outreach message referencing that content. Link to Innovation Bound's proven podcast marketing training that achieves 28% response rates.
@@ -9,7 +25,7 @@ Build a single-page HTML website that identifies 3-5 ideal podcast guests who ar
 ## Output
 
 Self-contained HTML file with:
-- Inline CSS matching their brand (colors, fonts from brand guidelines research)
+- Inline CSS matching their brand (colors, fonts from brand guidelines)
 - Analysis of client's target customers and ideal guest profile
 - 3-5 curated podcast guest prospects with:
   - LinkedIn profile link
@@ -317,87 +333,43 @@ document.querySelectorAll('.copy-btn').forEach(function(btn) {
 </script>
 ```
 
-## Phase 5: Styling with Brand
+## Phase 5: Styling with Client's Brand
 
-### 5.1 Use Brand Colors
+### 5.1 Extract Colors from Brand Guidelines
+
+Open `../brand-guidelines/index.html` and copy the exact CSS variables:
 
 ```css
 :root {
-  --primary-color: #hexcode; /* From brand guidelines */
+  /* Copy these EXACT values from brand-guidelines/index.html */
+  --primary-color: #hexcode;
   --secondary-color: #hexcode;
   --accent-color: #hexcode;
-}
-
-.prospect-card {
-  border-left: 4px solid var(--accent-color);
-  padding: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-}
-
-.prospect-card h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.content-summary {
-  font-style: italic;
-  color: #555;
-  padding: 1rem;
-  background: #f9f9f9;
-  border-left: 3px solid var(--accent-color);
-  margin: 0.5rem 0;
-}
-
-.message-box {
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 4px;
-  margin: 1rem 0;
-}
-
-.message-box pre {
-  white-space: pre-wrap;
-  font-family: inherit;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.copy-btn {
-  background: var(--primary-color);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.cta-button {
-  display: inline-block;
-  background: var(--primary-color);
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
+  /* Add any other colors they defined */
 }
 ```
 
-### 5.2 Use Brand Fonts
+Apply to cards, buttons, and interactive elements to match their brand.
+
+### 5.2 Use Their Fonts
+
+Copy the exact Google Fonts link and font-family from brand-guidelines:
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=FontName&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=TheirFont&display=swap" rel="stylesheet">
 
 <style>
 body {
-  font-family: 'FontName', Arial, sans-serif;
+  font-family: 'TheirFont', Arial, sans-serif; /* Use their actual font */
 }
 </style>
 ```
+
+### 5.3 Match Their Design Patterns
+
+Look at how cards, buttons, and spacing are styled in brand-guidelines, then replicate that aesthetic.
+
+**IMPORTANT:** Don't use generic CSS patterns. Study their brand guidelines and create CSS that matches THEIR visual style.
 
 ## Success Criteria
 

@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 AI Ideas for Best Thrive</title>
+
+    <!-- Google Fonts - Match Brand Guidelines -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Best Thrive Brand Colors from Brand Guidelines */
+            --brand-primary: #cc9e00;
+            --brand-primary-hover: #ffc500;
+            --brand-text: #737373;
+            --brand-heading: #4d4d4d;
+            --brand-background: #ffffff;
+            --brand-accent-bg: #fff9e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Instructions */
+        .instructions {
+            background: var(--brand-accent-bg);
+            border-left: 4px solid var(--brand-primary);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 8px;
+        }
+
+        .instructions h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--brand-heading);
+            margin-bottom: 15px;
+        }
+
+        .instructions ol {
+            margin-left: 25px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        /* Ideas Section */
+        .ideas-section {
+            padding: 40px 20px;
+        }
+
+        .ideas-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--brand-heading);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--brand-primary);
+        }
+
+        .idea-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .idea-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .idea-card:hover {
+            border-left-color: var(--brand-primary);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .idea-card input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--brand-primary);
+        }
+
+        .idea-card label {
+            cursor: pointer;
+            display: block;
+        }
+
+        .idea-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            color: var(--brand-heading);
+            margin-bottom: 8px;
+            display: inline;
+        }
+
+        .idea-card p {
+            color: var(--brand-text);
+            font-size: 0.95rem;
+            margin-top: 8px;
+            line-height: 1.6;
+        }
+
+        /* Prompt Section */
+        .prompt-section {
+            background: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .prompt-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .prompt-section > p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .copy-btn {
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        .prompt-box {
+            background: white;
+            border: 2px solid var(--brand-primary);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-heading);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .idea-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>100 AI Ideas to Grow Best Thrive</h1>
+        <p class="subtitle">Tailored for Educational Services | Prepared by Innovation Bound</p>
+    </header>
+
+    <!-- Instructions -->
+    <section>
+        <div class="container">
+            <div class="instructions">
+                <h2>📋 How to Use This</h2>
+                <ol>
+                    <li>Read through the 100 AI-powered ideas below</li>
+                    <li>Check the boxes next to your favorite ideas</li>
+                    <li>Scroll to the bottom and click "Copy Prompt" to get a custom ChatGPT prompt</li>
+                    <li>Paste the prompt into ChatGPT to get detailed implementation plans for your selected ideas</li>
+                </ol>
+                <p style="margin-top: 15px;"><strong>This is 2 of 5 Customized AI Demos prepared for Best Thrive.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing & Parent Outreach --
+>
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Marketing & Parent Outreach (15 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-1" class="idea-checkbox" data-title="Personalized Welcome Emails" data-description="AI-generated personalized welcome emails for new parents based on their child's age, interests, and learning goals.">
+                    <label for="idea-1">
+                        <h3>Personalized Welcome Emails</h3>
+                        <p>AI-generated personalized welcome emails for new parents based on their child's age, interests, and learning goals.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-2" class="idea-checkbox" data-title="Social Media Content Calendar" data-description="Generate a month's worth of engaging social media posts showcasing student success stories and learning tips.">
+                    <label for="idea-2">
+                        <h3>Social Media Content Calendar</h3>
+                        <p>Generate a month's worth of engaging social media posts showcasing student success stories and learning tips.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-3" class="idea-checkbox" data-title="SEO Blog Posts" data-description="Create monthly blog posts targeting parent search queries like 'how to help my child with reading' optimized for local SEO.">
+                    <label for="idea-3">
+                        <h3>SEO Blog Posts</h3>
+                        <p>Create monthly blog posts targeting parent search queries like "how to help my child with reading" optimized for local SEO.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-4" class="idea-checkbox" data-title="Parent Testimonial Summaries" data-description="Analyze parent feedback and create compelling testimonial highlights for marketing materials.">
+                    <label for="idea-4">
+                        <h3>Parent Testimonial Summaries</h3>
+                        <p>Analyze parent feedback and create compelling testimonial highlights for marketing materials.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-5" class="idea-checkbox" data-title="Email Newsletter Generator" data-description="Create monthly parent newsletters with learning tips, student spotlights, and program updates.">
+                    <label for="idea-5">
+                        <h3>Email Newsletter Generator</h3>
+                        <p>Create monthly parent newsletters with learning tips, student spotlights, and program updates.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-6" class="idea-checkbox" data-title="Local Event Ideas" data-description="Generate ideas for community events and workshops that attract families in Rochester, NY.">
+                    <label for="idea-6">
+                        <h3>Local Event Ideas</h3>
+                        <p>Generate ideas for community events and workshops that attract families in Rochester, NY.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-7" class="idea-checkbox" data-title="Referral Program Messaging" data-description="Create compelling referral program copy that encourages parents to recommend Best Thrive to friends.">
+                    <label for="idea-7">
+                        <h3>Referral Program Messaging</h3>
+                        <p>Create compelling referral program copy that encourages parents to recommend Best Thrive to friends.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-8" class="idea-checkbox" data-title="Video Script Generator" data-description="Generate scripts for short promotional videos showcasing your personalized learning approach.">
+                    <label for="idea-8">
+                        <h3>Video Script Generator</h3>
+                        <p>Generate scripts for short promotional videos showcasing your personalized learning approach.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-9" class="idea-checkbox" data-title="FAQ Automation" data-description="Build a comprehensive FAQ section addressing common parent questions about enrollment, pricing, and curriculum.">
+                    <label for="idea-9">
+                        <h3>FAQ Automation</h3>
+                        <p>Build a comprehensive FAQ section addressing common parent questions about enrollment, pricing, and curriculum.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-10" class="idea-checkbox" data-title="Seasonal Campaign Ideas" data-description="Generate back-to-school, summer learning, and holiday-themed marketing campaigns.">
+                    <label for="idea-10">
+                        <h3>Seasonal Campaign Ideas</h3>
+                        <p>Generate back-to-school, summer learning, and holiday-themed marketing campaigns.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-11" class="idea-checkbox" data-title="Google Ads Copy" data-description="Create compelling Google Ads copy targeting parents searching for tutoring services in Rochester.">
+                    <label for="idea-11">
+                        <h3>Google Ads Copy</h3>
+                        <p>Create compelling Google Ads copy targeting parents searching for tutoring services in Rochester.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-12" class="idea-checkbox" data-title="Success Story Templates" data-description="Generate templates for documenting and sharing student success stories on your website and social media.">
+                    <label for="idea-12">
+                        <h3>Success Story Templates</h3>
+                        <p>Generate templates for documenting and sharing student success stories on your website and social media.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-13" class="idea-checkbox" data-title="Partnership Outreach Emails" data-description="Draft outreach emails to local schools and community organizations for partnership opportunities.">
+                    <label for="idea-13">
+                        <h3>Partnership Outreach Emails</h3>
+                        <p>Draft outreach emails to local schools and community organizations for partnership opportunities.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-14" class="idea-checkbox" data-title="Parent Workshop Topics" data-description="Generate engaging workshop topics for parents on supporting their child's learning at home.">
+                    <label for="idea-14">
+                        <h3>Parent Workshop Topics</h3>
+                        <p>Generate engaging workshop topics for parents on supporting their child's learning at home.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-15" class="idea-checkbox" data-title="Promotional Offer Copy" data-description="Create compelling promotional offers and limited-time discount messaging for enrollment campaigns.">
+                    <label for="idea-15">
+                        <h3>Promotional Offer Copy</h3>
+                        <p>Create compelling promotional offers and limited-time discount messaging for enrollment campaigns.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Engagement & Personalization -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Student Engagement & Personalization (13 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-16" class="idea-checkbox" data-title="Personalized Learning Plans" data-description="Generate customized learning plans based on each student's strengths, interests, and growth areas.">
+                    <label for="idea-16">
+                        <h3>Personalized Learning Plans</h3>
+                        <p>Generate customized learning plans based on each student's strengths, interests, and growth areas.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-17" class="idea-checkbox" data-title="Story Generator for Diverse Characters" data-description="Create engaging stories featuring diverse characters that students can relate to, supporting your inclusive learning approach.">
+                    <label for="idea-17">
+                        <h3>Story Generator for Diverse Characters</h3>
+                        <p>Create engaging stories featuring diverse characters that students can relate to, supporting your inclusive learning approach.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-18" class="idea-checkbox" data-title="Fun Learning Games Ideas" data-description="Generate age-appropriate, fun educational game ideas that make learning enjoyable.">
+                    <label for="idea-18">
+                        <h3>Fun Learning Games Ideas</h3>
+                        <p>Generate age-appropriate, fun educational game ideas that make learning enjoyable.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-19" class="idea-checkbox" data-title="Motivational Feedback Messages" data-description="Create personalized, encouraging feedback messages that build student confidence and self-esteem.">
+                    <label for="idea-19">
+                        <h3>Motivational Feedback Messages</h3>
+                        <p>Create personalized, encouraging feedback messages that build student confidence and self-esteem.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-20" class="idea-checkbox" data-title="Reading Level Assessments" data-description="Analyze student reading samples to recommend appropriate reading levels and book suggestions.">
+                    <label for="idea-20">
+                        <h3>Reading Level Assessments</h3>
+                        <p>Analyze student reading samples to recommend appropriate reading levels and book suggestions.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-21" class="idea-checkbox" data-title="Homework Help Prompts" data-description="Generate age-appropriate prompts to help students work through homework challenges independently.">
+                    <label for="idea-21">
+                        <h3>Homework Help Prompts</h3>
+                        <p>Generate age-appropriate prompts to help students work through homework challenges independently.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-22" class="idea-checkbox" data-title="Creative Writing Prompts" data-description="Create fun, engaging writing prompts tailored to each student's interests and reading level.">
+                    <label for="idea-22">
+                        <h3>Creative Writing Prompts</h3>
+                        <p>Create fun, engaging writing prompts tailored to each student's interests and reading level.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-23" class="idea-checkbox" data-title="Math Problem Generators" data-description="Generate practice math problems at the right difficulty level for each student.">
+                    <label for="idea-23">
+                        <h3>Math Problem Generators</h3>
+                        <p>Generate practice math problems at the right difficulty level for each student.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-24" class="idea-checkbox" data-title="Student Interest Surveys" data-description="Create engaging surveys to discover student interests and incorporate them into lessons.">
+                    <label for="idea-24">
+                        <h3>Student Interest Surveys</h3>
+                        <p>Create engaging surveys to discover student interests and incorporate them into lessons.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-25" class="idea-checkbox" data-title="Achievement Certificates" data-description="Generate personalized achievement certificates celebrating student milestones and progress.">
+                    <label for="idea-25">
+                        <h3>Achievement Certificates</h3>
+                        <p>Generate personalized achievement certificates celebrating student milestones and progress.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-26" class="idea-checkbox" data-title="Learning Style Identification" data-description="Analyze student responses to identify whether they're visual, auditory, or kinesthetic learners.">
+                    <label for="idea-26">
+                        <h3>Learning Style Identification</h3>
+                        <p>Analyze student responses to identify whether they're visual, auditory, or kinesthetic learners.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-27" class="idea-checkbox" data-title="Vocabulary Building Lists" data-description="Generate age-appropriate vocabulary lists with fun definitions and example sentences.">
+                    <label for="idea-27">
+                        <h3>Vocabulary Building Lists</h3>
+                        <p>Generate age-appropriate vocabulary lists with fun definitions and example sentences.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-28" class="idea-checkbox" data-title="Science Experiment Ideas" data-description="Create simple, safe science experiments that students can do with household items.">
+                    <label for="idea-28">
+                        <h3>Science Experiment Ideas</h3>
+                        <p>Create simple, safe science experiments that students can do with household items.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Creation & Curriculum -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Content Creation & Curriculum (12 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-29" class="idea-checkbox" data-title="Lesson Plan Generator" data-description="Create comprehensive lesson plans aligned with learning objectives and Common Core standards.">
+                    <label for="idea-29">
+                        <h3>Lesson Plan Generator</h3>
+                        <p>Create comprehensive lesson plans aligned with learning objectives and Common Core standards.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-30" class="idea-checkbox" data-title="Activity Worksheets" data-description="Generate printable worksheets for math, reading comprehension, and writing practice.">
+                    <label for="idea-30">
+                        <h3>Activity Worksheets</h3>
+                        <p>Generate printable worksheets for math, reading comprehension, and writing practice.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-31" class="idea-checkbox" data-title="Educational Video Scripts" data-description="Write scripts for short educational videos explaining concepts in fun, engaging ways.">
+                    <label for="idea-31">
+                        <h3>Educational Video Scripts</h3>
+                        <p>Write scripts for short educational videos explaining concepts in fun, engaging ways.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-32" class="idea-checkbox" data-title="Quiz and Test Generator" data-description="Create age-appropriate quizzes and tests to assess student understanding.">
+                    <label for="idea-32">
+                        <h3>Quiz and Test Generator</h3>
+                        <p>Create age-appropriate quizzes and tests to assess student understanding.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-33" class="idea-checkbox" data-title="Parent Education Materials" data-description="Develop guides for parents on supporting learning at home and understanding child development.">
+                    <label for="idea-33">
+                        <h3>Parent Education Materials</h3>
+                        <p>Develop guides for parents on supporting learning at home and understanding child development.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-34" class="idea-checkbox" data-title="Character Education Lessons" data-description="Create lessons teaching values like kindness, perseverance, and respect through stories and activities.">
+                    <label for="idea-34">
+                        <h3>Character Education Lessons</h3>
+                        <p>Create lessons teaching values like kindness, perseverance, and respect through stories and activities.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-35" class="idea-checkbox" data-title="Curriculum Gap Analysis" data-description="Identify gaps in student knowledge and generate targeted lessons to fill those gaps.">
+                    <label for="idea-35">
+                        <h3>Curriculum Gap Analysis</h3>
+                        <p>Identify gaps in student knowledge and generate targeted lessons to fill those gaps.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-36" class="idea-checkbox" data-title="Culturally Responsive Resources" data-description="Create learning materials that celebrate diversity and represent various cultures and backgrounds.">
+                    <label for="idea-36">
+                        <h3>Culturally Responsive Resources</h3>
+                        <p>Create learning materials that celebrate diversity and represent various cultures and backgrounds.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-37" class="idea-checkbox" data-title="Study Skills Guides" data-description="Develop age-appropriate study skills guides teaching organization, time management, and test-taking strategies.">
+                    <label for="idea-37">
+                        <h3>Study Skills Guides</h3>
+                        <p>Develop age-appropriate study skills guides teaching organization, time management, and test-taking strategies.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-38" class="idea-checkbox" data-title="Summer Learning Packets" data-description="Create summer learning packets to prevent summer slide and keep skills sharp during breaks.">
+                    <label for="idea-38">
+                        <h3>Summer Learning Packets</h3>
+                        <p>Create summer learning packets to prevent summer slide and keep skills sharp during breaks.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-39" class="idea-checkbox" data-title="Art Integration Activities" data-description="Generate ideas for incorporating art into academic subjects to make learning more creative and fun.">
+                    <label for="idea-39">
+                        <h3>Art Integration Activities</h3>
+                        <p>Generate ideas for incorporating art into academic subjects to make learning more creative and fun.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-40" class="idea-checkbox" data-title="STEM Project Ideas" data-description="Create hands-on STEM projects that encourage critical thinking and problem-solving.">
+                    <label for="idea-40">
+                        <h3>STEM Project Ideas</h3>
+                        <p>Create hands-on STEM projects that encourage critical thinking and problem-solving.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operations & Administration -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Operations & Administration (10 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-41" class="idea-checkbox" data-title="Enrollment Email Sequences" data-description="Automate follow-up emails for inquiries, enrollment, and onboarding processes.">
+                    <label for="idea-41">
+                        <h3>Enrollment Email Sequences</h3>
+                        <p>Automate follow-up emails for inquiries, enrollment, and onboarding processes.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-42" class="idea-checkbox" data-title="Scheduling Reminders" data-description="Generate automated session reminders and rescheduling confirmation messages for parents.">
+                    <label for="idea-42">
+                        <h3>Scheduling Reminders</h3>
+                        <p>Generate automated session reminders and rescheduling confirmation messages for parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-43" class="idea-checkbox" data-title="Policy Documents" data-description="Create or update clear, parent-friendly policies for enrollment, payment, and cancellations.">
+                    <label for="idea-43">
+                        <h3>Policy Documents</h3>
+                        <p>Create or update clear, parent-friendly policies for enrollment, payment, and cancellations.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-44" class="idea-checkbox" data-title="Billing Statement Templates" data-description="Generate professional billing statements and payment receipt templates.">
+                    <label for="idea-44">
+                        <h3>Billing Statement Templates</h3>
+                        <p>Generate professional billing statements and payment receipt templates.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-45" class="idea-checkbox" data-title="Staff Meeting Agendas" data-description="Create structured meeting agendas for team planning and professional development sessions.">
+                    <label for="idea-45">
+                        <h3>Staff Meeting Agendas</h3>
+                        <p>Create structured meeting agendas for team planning and professional development sessions.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-46" class="idea-checkbox" data-title="Hiring Job Descriptions" data-description="Draft compelling job descriptions for hiring educators aligned with Best Thrive's mission and values.">
+                    <label for="idea-46">
+                        <h3>Hiring Job Descriptions</h3>
+                        <p>Draft compelling job descriptions for hiring educators aligned with Best Thrive's mission and values.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-47" class="idea-checkbox" data-title="Grant Application Assistance" data-description="Help draft compelling grant applications for educational funding opportunities.">
+                    <label for="idea-47">
+                        <h3>Grant Application Assistance</h3>
+                        <p>Help draft compelling grant applications for educational funding opportunities.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-48" class="idea-checkbox" data-title="Incident Report Templates" data-description="Create templates for documenting and communicating any student incidents or concerns to parents.">
+                    <label for="idea-48">
+                        <h3>Incident Report Templates</h3>
+                        <p>Create templates for documenting and communicating any student incidents or concerns to parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-49" class="idea-checkbox" data-title="Emergency Contact Forms" data-description="Generate clear, comprehensive emergency contact and medical information forms for all students.">
+                    <label for="idea-49">
+                        <h3>Emergency Contact Forms</h3>
+                        <p>Generate clear, comprehensive emergency contact and medical information forms for all students.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-50" class="idea-checkbox" data-title="Expense Categorization" data-description="Analyze and categorize business expenses for easier bookkeeping and tax preparation.">
+                    <label for="idea-50">
+                        <h3>Expense Categorization</h3>
+                        <p>Analyze and categorize business expenses for easier bookkeeping and tax preparation.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Communication & Support -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Parent Communication & Support (13 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-51" class="idea-checkbox" data-title="Progress Report Generator" data-description="Create detailed, personalized progress reports highlighting each student's achievements and growth areas.">
+                    <label for="idea-51">
+                        <h3>Progress Report Generator</h3>
+                        <p>Create detailed, personalized progress reports highlighting each student's achievements and growth areas.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-52" class="idea-checkbox" data-title="Parent Conference Scripts" data-description="Generate discussion guides for parent-teacher conferences focused on student strengths and goals.">
+                    <label for="idea-52">
+                        <h3>Parent Conference Scripts</h3>
+                        <p>Generate discussion guides for parent-teacher conferences focused on student strengths and goals.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-53" class="idea-checkbox" data-title="Weekly Update Templates" data-description="Create weekly update templates sharing what students learned and homework/practice suggestions.">
+                    <label for="idea-53">
+                        <h3>Weekly Update Templates</h3>
+                        <p>Create weekly update templates sharing what students learned and homework/practice suggestions.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-54" class="idea-checkbox" data-title="Celebration Messages" data-description="Generate positive messages to parents celebrating student milestones, breakthroughs, and achievements.">
+                    <label for="idea-54">
+                        <h3>Celebration Messages</h3>
+                        <p>Generate positive messages to parents celebrating student milestones, breakthroughs, and achievements.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-55" class="idea-checkbox" data-title="At-Home Learning Tips" data-description="Create personalized tips for parents on how to support their child's learning between sessions.">
+                    <label for="idea-55">
+                        <h3>At-Home Learning Tips</h3>
+                        <p>Create personalized tips for parents on how to support their child's learning between sessions.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-56" class="idea-checkbox" data-title="Difficult Conversation Scripts" data-description="Draft sensitive, supportive scripts for discussing challenging topics like learning disabilities or behavior concerns.">
+                    <label for="idea-56">
+                        <h3>Difficult Conversation Scripts</h3>
+                        <p>Draft sensitive, supportive scripts for discussing challenging topics like learning disabilities or behavior concerns.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-57" class="idea-checkbox" data-title="Re-enrollment Campaigns" data-description="Create compelling re-enrollment messaging highlighting student progress and upcoming opportunities.">
+                    <label for="idea-57">
+                        <h3>Re-enrollment Campaigns</h3>
+                        <p>Create compelling re-enrollment messaging highlighting student progress and upcoming opportunities.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-58" class="idea-checkbox" data-title="Parent Resource Library" data-description="Curate and organize a library of helpful parenting and learning resources specific to each child's needs.">
+                    <label for="idea-58">
+                        <h3>Parent Resource Library</h3>
+                        <p>Curate and organize a library of helpful parenting and learning resources specific to each child's needs.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-59" class="idea-checkbox" data-title="Birthday Messages" data-description="Generate personalized birthday messages for students that celebrate their unique strengths and growth.">
+                    <label for="idea-59">
+                        <h3>Birthday Messages</h3>
+                        <p>Generate personalized birthday messages for students that celebrate their unique strengths and growth.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-60" class="idea-checkbox" data-title="Survey Analysis" data-description="Analyze parent satisfaction surveys to identify trends and areas for improvement.">
+                    <label for="idea-60">
+                        <h3>Survey Analysis</h3>
+                        <p>Analyze parent satisfaction surveys to identify trends and areas for improvement.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-61" class="idea-checkbox" data-title="Response Templates" data-description="Create templates for common parent inquiries about scheduling, pricing, curriculum, and policies.">
+                    <label for="idea-61">
+                        <h3>Response Templates</h3>
+                        <p>Create templates for common parent inquiries about scheduling, pricing, curriculum, and policies.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-62" class="idea-checkbox" data-title="Summer Break Communication" data-description="Draft messages keeping parents engaged during summer break with learning tips and fall enrollment info.">
+                    <label for="idea-62">
+                        <h3>Summer Break Communication</h3>
+                        <p>Draft messages keeping parents engaged during summer break with learning tips and fall enrollment info.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-63" class="idea-checkbox" data-title="Book Recommendation Lists" data-description="Generate age-appropriate book recommendation lists tailored to each student's reading level and interests.">
+                    <label for="idea-63">
+                        <h3>Book Recommendation Lists</h3>
+                        <p>Generate age-appropriate book recommendation lists tailored to each student's reading level and interests.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment & Progress Tracking -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Assessment & Progress Tracking (10 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-64" class="idea-checkbox" data-title="Learning Milestone Tracker" data-description="Create a system for tracking and celebrating when students achieve key learning milestones.">
+                    <label for="idea-64">
+                        <h3>Learning Milestone Tracker</h3>
+                        <p>Create a system for tracking and celebrating when students achieve key learning milestones.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-65" class="idea-checkbox" data-title="Assessment Data Analysis" data-description="Analyze assessment data to identify patterns in student performance and inform instruction.">
+                    <label for="idea-65">
+                        <h3>Assessment Data Analysis</h3>
+                        <p>Analyze assessment data to identify patterns in student performance and inform instruction.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-66" class="idea-checkbox" data-title="Growth Visualization" data-description="Create visual representations of student progress over time to share with parents.">
+                    <label for="idea-66">
+                        <h3>Growth Visualization</h3>
+                        <p>Create visual representations of student progress over time to share with parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-67" class="idea-checkbox" data-title="IEP Goal Tracking" data-description="Track and document progress toward IEP goals with data-driven updates for parents and schools.">
+                    <label for="idea-67">
+                        <h3>IEP Goal Tracking</h3>
+                        <p>Track and document progress toward IEP goals with data-driven updates for parents and schools.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-68" class="idea-checkbox" data-title="Skill Mastery Checklists" data-description="Generate checklists of grade-level skills and track student mastery over time.">
+                    <label for="idea-68">
+                        <h3>Skill Mastery Checklists</h3>
+                        <p>Generate checklists of grade-level skills and track student mastery over time.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-69" class="idea-checkbox" data-title="Intervention Recommendations" data-description="Analyze student struggles and generate targeted intervention strategies for specific skill gaps.">
+                    <label for="idea-69">
+                        <h3>Intervention Recommendations</h3>
+                        <p>Analyze student struggles and generate targeted intervention strategies for specific skill gaps.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-70" class="idea-checkbox" data-title="Benchmark Comparison" data-description="Compare student performance to grade-level benchmarks and identify areas needing focus.">
+                    <label for="idea-70">
+                        <h3>Benchmark Comparison</h3>
+                        <p>Compare student performance to grade-level benchmarks and identify areas needing focus.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-71" class="idea-checkbox" data-title="Portfolio Summaries" data-description="Summarize student work portfolios highlighting growth, strengths, and next steps.">
+                    <label for="idea-71">
+                        <h3>Portfolio Summaries</h3>
+                        <p>Summarize student work portfolios highlighting growth, strengths, and next steps.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-72" class="idea-checkbox" data-title="Diagnostic Test Creation" data-description="Create diagnostic tests to assess student knowledge at the start of new units or topics.">
+                    <label for="idea-72">
+                        <h3>Diagnostic Test Creation</h3>
+                        <p>Create diagnostic tests to assess student knowledge at the start of new units or topics.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-73" class="idea-checkbox" data-title="Attendance Pattern Analysis" data-description="Analyze attendance patterns and generate outreach strategies for students with frequent absences.">
+                    <label for="idea-73">
+                        <h3>Attendance Pattern Analysis</h3>
+                        <p>Analyze attendance patterns and generate outreach strategies for students with frequent absences.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Community Building -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Social Media & Community Building (12 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-74" class="idea-checkbox" data-title="Instagram Caption Generator" data-description="Create engaging Instagram captions showcasing student work and celebrating learning milestones.">
+                    <label for="idea-74">
+                        <h3>Instagram Caption Generator</h3>
+                        <p>Create engaging Instagram captions showcasing student work and celebrating learning milestones.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-75" class="idea-checkbox" data-title="Facebook Group Discussion Prompts" data-description="Generate engaging discussion topics for a parent community group.">
+                    <label for="idea-75">
+                        <h3>Facebook Group Discussion Prompts</h3>
+                        <p>Generate engaging discussion topics for a parent community group.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-76" class="idea-checkbox" data-title="Learning Tip Graphics" data-description="Create text for shareable graphics offering quick learning tips for parents.">
+                    <label for="idea-76">
+                        <h3>Learning Tip Graphics</h3>
+                        <p>Create text for shareable graphics offering quick learning tips for parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-77" class="idea-checkbox" data-title="Student Spotlight Posts" data-description="Draft social media posts celebrating individual student achievements while maintaining privacy.">
+                    <label for="idea-77">
+                        <h3>Student Spotlight Posts</h3>
+                        <p>Draft social media posts celebrating individual student achievements while maintaining privacy.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-78" class="idea-checkbox" data-title="Hashtag Strategy" data-description="Generate relevant hashtags for Rochester education, diversity in learning, and child development.">
+                    <label for="idea-78">
+                        <h3>Hashtag Strategy</h3>
+                        <p>Generate relevant hashtags for Rochester education, diversity in learning, and child development.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-79" class="idea-checkbox" data-title="Community Event Announcements" data-description="Create compelling social media announcements for workshops, open houses, and community events.">
+                    <label for="idea-79">
+                        <h3>Community Event Announcements</h3>
+                        <p>Create compelling social media announcements for workshops, open houses, and community events.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-80" class="idea-checkbox" data-title="Video Description Scripts" data-description="Write descriptions and CTAs for short video content showcasing your teaching approach.">
+                    <label for="idea-80">
+                        <h3>Video Description Scripts</h3>
+                        <p>Write descriptions and CTAs for short video content showcasing your teaching approach.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-81" class="idea-checkbox" data-title="Educational Memes" data-description="Generate ideas for relatable, shareable educational memes that resonate with parents.">
+                    <label for="idea-81">
+                        <h3>Educational Memes</h3>
+                        <p>Generate ideas for relatable, shareable educational memes that resonate with parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-82" class="idea-checkbox" data-title="Testimonial Graphics" data-description="Transform parent testimonials into visually appealing social media graphics.">
+                    <label for="idea-82">
+                        <h3>Testimonial Graphics</h3>
+                        <p>Transform parent testimonials into visually appealing social media graphics.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-83" class="idea-checkbox" data-title="Behind-the-Scenes Content" data-description="Create authentic behind-the-scenes content showing your team's dedication and teaching methods.">
+                    <label for="idea-83">
+                        <h3>Behind-the-Scenes Content</h3>
+                        <p>Create authentic behind-the-scenes content showing your team's dedication and teaching methods.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-84" class="idea-checkbox" data-title="Seasonal Content Themes" data-description="Generate themed social media content calendars for back-to-school, holidays, and summer.">
+                    <label for="idea-84">
+                        <h3>Seasonal Content Themes</h3>
+                        <p>Generate themed social media content calendars for back-to-school, holidays, and summer.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-85" class="idea-checkbox" data-title="Poll and Question Ideas" data-description="Create engaging poll questions and interactive content to boost parent engagement.">
+                    <label for="idea-85">
+                        <h3>Poll and Question Ideas</h3>
+                        <p>Create engaging poll questions and interactive content to boost parent engagement.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Training & Development -->
+    <section class="ideas-section">
+        <div class="container">
+            <h2>Staff Training & Development (15 ideas)</h2>
+            <div class="idea-grid">
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-86" class="idea-checkbox" data-title="Onboarding Checklists" data-description="Create comprehensive onboarding checklists for new educators covering policies, procedures, and Best Thrive's philosophy.">
+                    <label for="idea-86">
+                        <h3>Onboarding Checklists</h3>
+                        <p>Create comprehensive onboarding checklists for new educators covering policies, procedures, and Best Thrive's philosophy.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-87" class="idea-checkbox" data-title="Professional Development Topics" data-description="Generate relevant PD topics for your team on differentiation, cultural responsiveness, and engagement strategies.">
+                    <label for="idea-87">
+                        <h3>Professional Development Topics</h3>
+                        <p>Generate relevant PD topics for your team on differentiation, cultural responsiveness, and engagement strategies.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-88" class="idea-checkbox" data-title="Teaching Best Practices Library" data-description="Curate a library of teaching strategies, classroom management tips, and engagement techniques.">
+                    <label for="idea-88">
+                        <h3>Teaching Best Practices Library</h3>
+                        <p>Curate a library of teaching strategies, classroom management tips, and engagement techniques.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-89" class="idea-checkbox" data-title="Feedback Templates for Educators" data-description="Create constructive feedback templates for educator evaluations focusing on strengths and growth areas.">
+                    <label for="idea-89">
+                        <h3>Feedback Templates for Educators</h3>
+                        <p>Create constructive feedback templates for educator evaluations focusing on strengths and growth areas.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-90" class="idea-checkbox" data-title="Team Building Activities" data-description="Generate fun, meaningful team building activities that strengthen relationships among educators.">
+                    <label for="idea-90">
+                        <h3>Team Building Activities</h3>
+                        <p>Generate fun, meaningful team building activities that strengthen relationships among educators.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-91" class="idea-checkbox" data-title="Difficult Student Scenarios" data-description="Create practice scenarios and solutions for handling challenging student behaviors or learning barriers.">
+                    <label for="idea-91">
+                        <h3>Difficult Student Scenarios</h3>
+                        <p>Create practice scenarios and solutions for handling challenging student behaviors or learning barriers.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-92" class="idea-checkbox" data-title="Recognition Programs" data-description="Design educator recognition programs celebrating excellence, innovation, and dedication.">
+                    <label for="idea-92">
+                        <h3>Recognition Programs</h3>
+                        <p>Design educator recognition programs celebrating excellence, innovation, and dedication.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-93" class="idea-checkbox" data-title="Classroom Management Strategies" data-description="Generate age-specific classroom management strategies aligned with positive discipline approaches.">
+                    <label for="idea-93">
+                        <h3>Classroom Management Strategies</h3>
+                        <p>Generate age-specific classroom management strategies aligned with positive discipline approaches.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-94" class="idea-checkbox" data-title="Continuing Education Resources" data-description="Curate lists of webinars, courses, and certifications for ongoing educator development.">
+                    <label for="idea-94">
+                        <h3>Continuing Education Resources</h3>
+                        <p>Curate lists of webinars, courses, and certifications for ongoing educator development.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-95" class="idea-checkbox" data-title="Mentorship Program Structure" data-description="Design a mentorship program pairing experienced educators with new team members.">
+                    <label for="idea-95">
+                        <h3>Mentorship Program Structure</h3>
+                        <p>Design a mentorship program pairing experienced educators with new team members.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-96" class="idea-checkbox" data-title="Emergency Procedure Scripts" data-description="Create clear scripts for handling various emergency scenarios and communicating with parents.">
+                    <label for="idea-96">
+                        <h3>Emergency Procedure Scripts</h3>
+                        <p>Create clear scripts for handling various emergency scenarios and communicating with parents.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-97" class="idea-checkbox" data-title="Self-Care Resources" data-description="Curate educator self-care resources addressing burnout prevention and work-life balance.">
+                    <label for="idea-97">
+                        <h3>Self-Care Resources</h3>
+                        <p>Curate educator self-care resources addressing burnout prevention and work-life balance.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-98" class="idea-checkbox" data-title="Technology Integration Training" data-description="Create training materials for incorporating educational technology and AI tools into teaching.">
+                    <label for="idea-98">
+                        <h3>Technology Integration Training</h3>
+                        <p>Create training materials for incorporating educational technology and AI tools into teaching.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-99" class="idea-checkbox" data-title="Cultural Competency Training" data-description="Develop training on culturally responsive teaching and celebrating diversity in the classroom.">
+                    <label for="idea-99">
+                        <h3>Cultural Competency Training</h3>
+                        <p>Develop training on culturally responsive teaching and celebrating diversity in the classroom.</p>
+                    </label>
+                </div>
+
+                <div class="idea-card">
+                    <input type="checkbox" id="idea-100" class="idea-checkbox" data-title="Success Metrics Dashboard" data-description="Create a simple dashboard tracking key success metrics like student progress, parent satisfaction, and retention.">
+                    <label for="idea-100">
+                        <h3>Success Metrics Dashboard</h3>
+                        <p>Create a simple dashboard tracking key success metrics like student progress, parent satisfaction, and retention.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Section -->
+    <section class="prompt-section">
+        <div class="container">
+            <h2>Your Custom AI Prompt</h2>
+            <p>Select your favorite ideas above, then copy this prompt into ChatGPT for detailed implementation plans.</p>
+
+            <button class="copy-btn" onclick="copyPrompt()">Click to Copy Prompt</button>
+
+            <div class="prompt-box">
+                <pre id="generated-prompt">Select your favorite ideas above to generate a custom prompt...</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Best Thrive</strong> - Empowering children to thrive and succeed</p>
+        <p class="credit">Prepared by Innovation Bound | This is 2 of 5 Customized AI Demos</p>
+    </footer>
+
+    <script>
+        // Pure: generates company context for prompt
+        function getCompanyContext () {
+            return `I run an educational services business called Best Thrive in Rochester, New York.
+
+Our company: We provide personalized tutoring and educational enrichment for children from diverse backgrounds. We believe in the power of fun to transform lives, and our approach helps children reach their full potential while learning with characters that look like them.
+
+Our customers: Parents seeking personalized educational support for their children, focused on building both academic skills and self-esteem.
+
+Our products/services: One-on-one and small group tutoring, educational workshops, personalized learning plans, and character-based educational materials that celebrate diversity.`
+        }
+
+        // Pure: builds prompt from selected ideas
+        function buildPrompt (selectedIdeas) {
+            if (selectedIdeas.length === 0) {
+                return 'Select your favorite ideas above to generate a custom prompt...'
+            }
+
+            var context = getCompanyContext()
+            var ideasList = selectedIdeas.map(function(idea, index) {
+                return `${index + 1}. ${idea.title}: ${idea.description}`
+            }).join('\n\n')
+
+            return `${context}
+
+I want to explore these AI-powered ideas to grow my business:
+
+${ideasList}
+
+For each idea above, please provide:
+1. A detailed implementation plan with specific steps
+2. Specific AI tools or prompts I can use
+3. Expected time savings or ROI
+4. Any potential challenges to watch out for
+5. Examples of how this would work in practice
+
+Format each response clearly so I can take action immediately.`
+        }
+
+        // Side effect: Updates the prompt display
+        function updatePrompt () {
+            var checkboxes = document.querySelectorAll('.idea-checkbox:checked')
+            var selectedIdeas = Array.from(checkboxes).map(function(cb) {
+                return {
+                    title: cb.getAttribute('data-title'),
+                    description: cb.getAttribute('data-description')
+                }
+            })
+
+            var prompt = buildPrompt(selectedIdeas)
+            document.getElementById('generated-prompt').textContent = prompt
+        }
+
+        // Side effect: Copies prompt to clipboard
+        function copyPrompt () {
+            var promptText = document.getElementById('generated-prompt').textContent
+
+            if (promptText === 'Select your favorite ideas above to generate a custom prompt...') {
+                alert('Please select some ideas first!')
+                return
+            }
+
+            navigator.clipboard.writeText(promptText).then(function() {
+                var btn = document.querySelector('.copy-btn')
+                var originalText = btn.textContent
+                btn.textContent = 'Copied!'
+                btn.style.background = '#4caf50'
+
+                setTimeout(function() {
+                    btn.textContent = originalText
+                    btn.style.background = ''
+                }, 2000)
+            }).catch(function(err) {
+                console.error('Failed to copy:', err)
+                alert('Copy failed. Please try selecting and copying manually.')
+            })
+        }
+
+        // Add change listeners to all checkboxes
+        document.querySelectorAll('.idea-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', updatePrompt)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Report for Innovantage Collaborative</title>
+
+    <!-- Google Fonts - Match Brand Guidelines -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Innovantage Collaborative Brand Colors */
+            --brand-gold: #FCCD06;
+            --brand-cyan: #25D7F2;
+            --brand-dark-blue: #0057AE;
+            --brand-purple: #aa2377;
+            --brand-teal: #22d0c7;
+            --brand-coral: #ff6e6e;
+            --brand-text: #333;
+            --brand-background: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito Sans', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-cyan) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-dark-blue);
+            margin-bottom: 15px;
+        }
+
+        /* Market Position Cards */
+        .position-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .position-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--brand-gold);
+        }
+
+        .position-card h3 {
+            color: var(--brand-purple);
+        }
+
+        /* Competitor Cards */
+        .competitor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .competitor-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--brand-cyan);
+            transition: all 0.3s;
+        }
+
+        .competitor-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .competitor-card h3 {
+            color: var(--brand-dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .competitor-website {
+            margin-bottom: 20px;
+        }
+
+        .competitor-website a {
+            color: var(--brand-cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .competitor-website a:hover {
+            color: var(--brand-teal);
+            text-decoration: underline;
+        }
+
+        .competitor-details p {
+            margin-bottom: 12px;
+        }
+
+        .competitor-details strong {
+            color: var(--brand-dark-blue);
+        }
+
+        /* Instructions Box */
+        .instructions {
+            background: linear-gradient(135deg, rgba(252, 205, 6, 0.1) 0%, rgba(37, 215, 242, 0.1) 100%);
+            border-left: 4px solid var(--brand-gold);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .instructions ol {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        /* Tracking Info */
+        .tracking-info {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tracking-info ul {
+            margin-left: 25px;
+            margin-top: 15px;
+        }
+
+        .tracking-info li {
+            margin-bottom: 10px;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-cyan) 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Prompt Box */
+        .prompt-box {
+            background: white;
+            border: 2px solid var(--brand-cyan);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-dark-blue);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .position-grid,
+            .competitor-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Competitor Report for Innovantage Collaborative</h1>
+        <p class="subtitle">Market Analysis & Weekly Tracking | Prepared by Innovation Bound</p>
+    </header>
+
+    <!-- Market Position -->
+    <section>
+        <div class="container">
+            <h2>Your Market Position</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Understanding who you serve and what makes you unique in the women's entrepreneurship ecosystem:</p>
+
+            <div class="position-grid">
+                <div class="position-card">
+                    <h3>Problem You Solve</h3>
+                    <p>Female entrepreneurs struggle to find authentic business guidance that truly understands their unique challenges. Many platforms offer generic advice without the real-world insights and transformative relationships women founders need to build their legacy.</p>
+                </div>
+
+                <div class="position-card">
+                    <h3>Your Target Customers</h3>
+                    <p>Female founders and entrepreneurs, especially women in remote/digital-first sectors and minority-owned businesses, seeking authentic resources, mentorship, and community support to build lasting legacy businesses.</p>
+                </div>
+
+                <div class="position-card">
+                    <h3>Your Unique Value</h3>
+                    <p>You provide a multi-brand ecosystem that uplifts female founders through authentic empowerment, virtual assistance, mentorship, and transformative relationships. It's more than a journey—it's their legacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitors -->
+    <section>
+        <div class="container">
+            <h2>Your Top Competitors</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Based on market analysis, here are the platforms and organizations competing for your customers in the women's entrepreneurship space:</p>
+
+            <div class="competitor-grid">
+                <div class="competitor-card">
+                    <h3>SCORE</h3>
+                    <p class="competitor-website"><a href="https://www.score.org/women-entrepreneurs" target="_blank">score.org/women-entrepreneurs</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> Non-profit providing free expert resources, tools, and mentorship designed to support women at every stage of their entrepreneurial journey.</p>
+                        <p><strong>Target Market:</strong> Women entrepreneurs seeking practical guidance, funding insights, and one-on-one counseling at no cost.</p>
+                        <p><strong>Key Strength:</strong> Established national presence with volunteer mentors and completely free services backed by SBA.</p>
+                        <p><strong>Market Position:</strong> Free but generalist approach vs. your specialized focus on authentic empowerment for female founders.</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>BossBabe/Société</h3>
+                    <p class="competitor-website"><a href="https://bossbabe.com/" target="_blank">bossbabe.com</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> Private community for women entrepreneurs aiming to scale their businesses with tools, training, and a supportive network to achieve six-figure incomes.</p>
+                        <p><strong>Target Market:</strong> Ambitious women entrepreneurs focused on rapid revenue growth and scaling to 6-7 figures.</p>
+                        <p><strong>Key Strength:</strong> Large, engaged community with proven framework for revenue growth and business scaling.</p>
+                        <p><strong>Market Position:</strong> High-profile brand focused on revenue goals vs. your holistic approach to legacy building and transformative relationships.</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>Ellevate Network</h3>
+                    <p class="competitor-website"><a href="https://www.ellevatenetwork.com/" target="_blank">ellevatenetwork.com</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> Global community for women+ who know there is strength in numbers, offering networking, mentorship, and career advancement resources.</p>
+                        <p><strong>Target Market:</strong> Professional women and entrepreneurs seeking networking opportunities and peer support globally.</p>
+                        <p><strong>Key Strength:</strong> Established global network with corporate partnerships and certified as Women's Business Enterprise.</p>
+                        <p><strong>Market Position:</strong> Broader professional network vs. your specific focus on female founders and entrepreneurship ecosystem.</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>Women 2.0</h3>
+                    <p class="competitor-website"><a href="https://women2.com/" target="_blank">women2.com</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> Community focused on women in technology and entrepreneurship, offering events, mentorship, and pitch competitions to help female founders secure funding.</p>
+                        <p><strong>Target Market:</strong> Women tech founders seeking venture funding and connections to investors.</p>
+                        <p><strong>Key Strength:</strong> Strong focus on fundraising and investor connections, particularly in tech sector.</p>
+                        <p><strong>Market Position:</strong> Tech-focused fundraising platform vs. your multi-industry ecosystem with authentic business guidance.</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>She Runs It</h3>
+                    <p class="competitor-website"><a href="https://sherunsit.org/" target="_blank">sherunsit.org</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> Non-profit serving women in marketing, media, and tech industries with 6,000+ members globally, offering networking events, mentoring programs, and education grants.</p>
+                        <p><strong>Target Market:</strong> Women in marketing, media, and technology sectors seeking industry-specific networking and mentorship.</p>
+                        <p><strong>Key Strength:</strong> Industry-specific focus with established reputation in marketing/media/tech verticals.</p>
+                        <p><strong>Market Position:</strong> Industry-specific non-profit vs. your cross-industry entrepreneurial ecosystem with virtual assistance and business services.</p>
+                    </div>
+                </div>
+
+                <div class="competitor-card">
+                    <h3>Virtual Assistant Platforms (Time etc, MyWorksy)</h3>
+                    <p class="competitor-website"><a href="https://www.timeetc.com/" target="_blank">timeetc.com</a> / <a href="https://myworksy.com/" target="_blank">myworksy.com</a></p>
+                    <div class="competitor-details">
+                        <p><strong>What They Do:</strong> On-demand virtual assistant matching services connecting businesses with pre-vetted VAs for administrative and business support tasks.</p>
+                        <p><strong>Target Market:</strong> Business owners and entrepreneurs needing delegated administrative support without hiring full-time staff.</p>
+                        <p><strong>Key Strength:</strong> Fast matching, established VA pools, streamlined onboarding, and transparent pricing models.</p>
+                        <p><strong>Market Position:</strong> Transactional VA service providers vs. your holistic ecosystem combining VA services with mentorship, community, and legacy building.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Tracking -->
+    <section>
+        <div class="container">
+            <h2>Weekly Competitor Tracking with ChatGPT</h2>
+
+            <div class="instructions">
+                <p><strong>Set up automated weekly competitor monitoring:</strong></p>
+                <ol>
+                    <li>Copy the prompt below by clicking the button</li>
+                    <li>Go to ChatGPT and click on "Schedules" in the sidebar</li>
+                    <li>Create a new schedule, set it to run weekly (e.g., every Monday at 9am)</li>
+                    <li>Paste the prompt into the schedule</li>
+                    <li>ChatGPT will research your competitors weekly and send you a summary</li>
+                </ol>
+            </div>
+
+            <button class="copy-btn" onclick="copyPrompt()">Click to Copy Tracking Prompt</button>
+
+            <div class="prompt-box">
+                <pre id="tracking-prompt">I run Innovantage Collaborative, a multi-brand ecosystem providing virtual assistance, mentorship, networking, and education for female founders and women entrepreneurs.
+
+Please research my top competitors and provide a weekly summary of any significant changes or updates:
+
+COMPETITORS TO TRACK:
+1. SCORE (Women Entrepreneurs) - score.org/women-entrepreneurs
+2. BossBabe/Société - bossbabe.com
+3. Ellevate Network - ellevatenetwork.com
+4. Women 2.0 - women2.com
+5. She Runs It - sherunsit.org
+6. Time etc (VA services) - timeetc.com
+7. MyWorksy (VA services) - myworksy.com
+
+For each competitor, check for:
+- New hires, job postings, or team changes
+- Press releases, news articles, or media appearances
+- Program launches, membership tier updates, or service changes
+- Social media announcements (LinkedIn, Facebook, Instagram, Twitter)
+- Pricing changes or new pricing tiers
+- Partnership announcements or strategic collaborations
+- Community events, workshops, or conferences
+- Funding announcements or investor news (for private companies)
+- Member testimonials or success stories
+
+FORMAT YOUR RESPONSE:
+- Start with "Weekly Competitor Update for Innovantage Collaborative - [Date]"
+- List only competitors with noteworthy updates
+- For each update, include: What happened, when, and why it matters to Innovantage Collaborative
+- End with "Strategic Insights" highlighting any trends or opportunities Innovantage should act on
+
+If no significant changes, reply: "No major competitor updates this week. Innovantage Collaborative's position remains stable."</pre>
+            </div>
+
+            <div class="tracking-info">
+                <p><strong>What This Tracks:</strong></p>
+                <ul>
+                    <li><strong>New hires and job postings</strong> - Indicates growth, expansion, or staffing challenges</li>
+                    <li><strong>Press releases and news mentions</strong> - Shows marketing activity and brand visibility</li>
+                    <li><strong>Program launches or updates</strong> - Reveals new offerings you may want to counter</li>
+                    <li><strong>Social media activity</strong> - Tracks engagement strategies and community sentiment</li>
+                    <li><strong>Pricing or positioning changes</strong> - Helps you stay competitively positioned</li>
+                    <li><strong>Partnership announcements</strong> - Identifies potential collaboration opportunities or threats</li>
+                    <li><strong>Community events</strong> - Reveals outreach strategies and member engagement tactics</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Why Weekly Monitoring Matters:</strong> Staying informed about competitor activities helps you identify opportunities, anticipate market changes, and ensure Innovantage Collaborative remains the authentic, transformative choice for female founders building their legacy businesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Innovantage Collaborative</strong> - Simplify. Dream. Transform. Lead. Empower.</p>
+            <p class="credit">Prepared by Innovation Bound | This is 3 of 5 Customized AI Demos</p>
+        </div>
+    </footer>
+
+    <script>
+        // Side effect: Copies tracking prompt to clipboard
+        function copyPrompt() {
+            var promptText = document.getElementById('tracking-prompt').textContent;
+
+            navigator.clipboard.writeText(promptText).then(function() {
+                var btn = document.querySelector('.copy-btn');
+                var originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = 'linear-gradient(135deg, #4caf50 0%, #45a049 100%)';
+
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -8,6 +8,7 @@ import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 import { readFile } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { createHash } from 'crypto'
 
 var __dirname = dirname(fileURLToPath(import.meta.url))
 var dynamoDb = new DynamoDBClient({ region: 'us-east-1' })
@@ -15,9 +16,9 @@ var db = DynamoDBDocumentClient.from(dynamoDb)
 var ses = new SESClient({ region: 'us-east-1' })
 var replyToAddress = "Innovation Bound <support@innovationbound.com>"
 
-// Pure: converts email to URL-safe slug
+// Pure: converts email to hex hash slug (first 12 chars of SHA256)
 function emailToSlug (email) {
-  return encodeURIComponent(email.toLowerCase())
+  return createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
 }
 
 async function sendTestEmail () {
@@ -29,6 +30,10 @@ async function sendTestEmail () {
     console.error('Example: npm run test costa@trollhair.com costa@innovationbound.com')
     process.exit(1)
   }
+
+  // Normalize email to lowercase
+  clientEmail = clientEmail.toLowerCase()
+  testEmail = testEmail.toLowerCase()
 
   console.log(`\nSending test email for ${clientEmail} to ${testEmail}...\n`)
 

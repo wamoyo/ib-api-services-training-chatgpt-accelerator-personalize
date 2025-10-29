@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Thrive - Brand Guidelines</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Best Thrive Brand Colors */
+            --brand-primary: #cc9e00;
+            --brand-primary-hover: #ffc500;
+            --brand-text: #737373;
+            --brand-heading: #4d4d4d;
+            --brand-background: #ffffff;
+            --brand-accent-bg: #fff9e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--brand-background);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--brand-primary);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 10px;
+        }
+
+        header .subtitle {
+            font-size: 1.5rem;
+            color: var(--brand-text);
+            margin-bottom: 10px;
+        }
+
+        header .attribution {
+            font-size: 1rem;
+            color: var(--brand-text);
+            font-style: italic;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Typography examples should be left-aligned */
+        .type-h1, .type-h2, .type-h3 {
+            text-align: left;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: var(--brand-heading);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* Introduction Box */
+        .intro-box {
+            background: var(--brand-accent-bg);
+            border-left: 4px solid var(--brand-primary);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+            border-radius: 8px;
+        }
+
+        .intro-box h3 {
+            color: var(--brand-primary);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            text-align: left;
+        }
+
+        .intro-box ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .intro-box li {
+            margin-bottom: 10px;
+        }
+
+        /* AI Prompt Collapsible */
+        details.prompt-collapsible {
+            background: #f5f5f5;
+            border: 2px solid var(--brand-primary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        details.prompt-collapsible summary {
+            cursor: pointer;
+            list-style: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--brand-heading);
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        details.prompt-collapsible summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.prompt-collapsible summary .toggle-indicator {
+            font-size: 1rem;
+            color: var(--brand-primary);
+        }
+
+        details.prompt-collapsible[open] summary .toggle-indicator::before {
+            content: "▲ Click to collapse";
+        }
+
+        details.prompt-collapsible:not([open]) summary .toggle-indicator::before {
+            content: "▼ Click to expand";
+        }
+
+        .prompt-content-wrapper {
+            margin-top: 20px;
+        }
+
+        .prompt-box {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+
+        .prompt-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        /* Brand Personality Cards */
+        .personality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .personality-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .personality-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .personality-card h3 {
+            color: var(--brand-primary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .personality-card p {
+            color: var(--brand-text);
+            margin: 0;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .color-swatch {
+            text-align: center;
+        }
+
+        .color-box {
+            height: 180px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .color-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--brand-heading);
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            color: var(--brand-text);
+            font-size: 0.95rem;
+        }
+
+        /* Typography Section */
+        .typography-example {
+            margin: 30px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .type-h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            color: var(--brand-heading);
+            margin-bottom: 10px;
+        }
+
+        .type-h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.55rem;
+            color: var(--brand-heading);
+            margin-bottom: 10px;
+        }
+
+        .type-h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.1rem;
+            color: var(--brand-heading);
+            margin-bottom: 10px;
+        }
+
+        .type-body {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-text);
+            line-height: 1.8;
+        }
+
+        /* Logo Usage */
+        .logo-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .logo-example {
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .logo-example.light-bg {
+            background: white;
+            border: 1px solid #ddd;
+        }
+
+        .logo-example.dark-bg {
+            background: #2c2c2c;
+        }
+
+        .logo-example .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .logo-example.light-bg .logo-text {
+            color: var(--brand-heading);
+        }
+
+        .logo-example.dark-bg .logo-text {
+            color: white;
+        }
+
+        .logo-example p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .logo-example.light-bg p {
+            color: var(--brand-text);
+        }
+
+        .logo-example.dark-bg p {
+            color: #ccc;
+        }
+
+        /* Design Elements */
+        .button-examples {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn-primary {
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--brand-primary);
+            border: 2px solid var(--brand-primary);
+            padding: 13px 28px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--brand-primary);
+            color: white;
+        }
+
+        /* Style Suggestions */
+        .style-suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .style-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .style-card h3 {
+            color: var(--brand-primary);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .style-card p {
+            color: var(--brand-text);
+            margin-bottom: 15px;
+        }
+
+        .style-prompt {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Key Messaging */
+        .value-props {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .value-props li {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+            border-left: 4px solid var(--brand-primary);
+            border-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Writing Style Do's and Don'ts */
+        .writing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .writing-column {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .writing-column h3 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .writing-column.do h3 {
+            color: #4caf50;
+        }
+
+        .writing-column.dont h3 {
+            color: #f44336;
+        }
+
+        .writing-column ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .writing-column li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .writing-column li:last-child {
+            border-bottom: none;
+        }
+
+        .writing-column.do li::before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .writing-column.dont li::before {
+            content: "✗ ";
+            color: #f44336;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-heading);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Video Container */
+        .video-container {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header .subtitle {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .writing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .type-h1 {
+                font-size: 2.2rem;
+            }
+
+            .type-h2 {
+                font-size: 1.9rem;
+            }
+
+            .type-h3 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Best Thrive</h1>
+        <p class="subtitle">Brand Guidelines</p>
+        <p class="attribution">Prepared for Sharifa E Whitt by Innovation Bound</p>
+    </header>
+
+    <!-- Introduction -->
+    <section>
+        <div class="container">
+            <div class="intro-box">
+                <h3>📌 How to Use These Brand Guidelines with AI</h3>
+                <p>Two features below help you maintain brand consistency when using AI tools:</p>
+                <ol>
+                    <li><strong>AI Brand Prompt</strong> (collapsed section below) — Copy this into ChatGPT to ensure AI-generated content follows your brand guidelines</li>
+                    <li><strong>AI Image Style Suggestions</strong> (scroll down) — Pre-written prompts for AI image generators, no design degree required</li>
+                </ol>
+                <p>This is 1 of 5 Customized AI Demos prepared for your business.</p>
+            </div>
+
+            <!-- AI Brand Prompt (Collapsed) -->
+            <details class="prompt-collapsible">
+                <summary>
+                    AI Brand Prompt
+                    <span class="toggle-indicator"></span>
+                </summary>
+                <div class="prompt-content-wrapper">
+                    <p>Copy this prompt and paste it into ChatGPT or another AI tool to ensure generated content matches your brand:</p>
+                    <button class="copy-btn" data-copy-target="ai-brand-prompt">Click to Copy Prompt</button>
+                    <div class="prompt-box">
+                        <pre id="ai-brand-prompt">You are helping Best Thrive, an educational services company focused on child tutoring and development. Follow these brand guidelines:
+
+**Brand Colors:**
+- Primary Accent: #cc9e00 (Gold/Mustard yellow)
+- Accent Hover: #ffc500 (Brighter gold)
+- Body Text: #737373 (Medium gray)
+- Headings: #4d4d4d (Dark gray)
+
+**Typography:**
+- Body Font: Lato
+- Heading Font: Montserrat
+
+**Brand Personality:**
+- Warm and optimistic
+- Child-focused and approachable
+- Professional yet friendly
+- Empowering and inclusive
+
+**Key Messages:**
+- "Empowering children to thrive and succeed"
+- "We believe in the power of fun to transform lives"
+- Personalized learning with diverse, representative characters
+- Building high self-esteem while having fun
+
+**Writing Style:**
+- Use warm, encouraging language
+- Keep it simple and accessible (parents are the primary audience)
+- Focus on the child's potential and growth
+- Emphasize fun, engagement, and personalization
+- Avoid overly academic or formal language
+
+**DO:**
+- Focus on children's success and growth
+- Emphasize fun and engagement
+- Use inclusive, diverse language
+- Highlight personalized approach
+- Keep tone warm and optimistic
+
+**DON'T:**
+- Use corporate jargon or overly formal language
+- Make it sound intimidating or overly academic
+- Ignore the importance of fun and play in learning
+- Use generic educational platitudes</pre>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Brand Overview -->
+    <section>
+        <div class="container">
+            <h2>Brand Overview</h2>
+            <h3>Best Thrive</h3>
+            <p><strong>Tagline:</strong> "Empowering children to thrive and succeed"</p>
+            <p><strong>Industry:</strong> Educational Services / Child Tutoring and Development</p>
+            <p><strong>Mission:</strong> We believe in the power of fun to transform lives. Our personalized approach helps children reach their full potential while learning with characters that look like them.</p>
+            <p><strong>Target Market:</strong> Parents of children from diverse backgrounds seeking personalized educational support and academic enrichment</p>
+            <p><strong>Location:</strong> Rochester, New York, United States</p>
+        </div>
+    </section>
+
+    <!-- Brand Personality -->
+    <section>
+        <div class="container">
+            <h2>Brand Personality</h2>
+            <div class="personality-grid">
+                <div class="personality-card">
+                    <div class="icon">🌟</div>
+                    <h3>Empowering</h3>
+                    <p>We uplift children and help them believe in their potential</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🎨</div>
+                    <h3>Fun-Focused</h3>
+                    <p>We believe fun transforms learning and builds engagement</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">🤝</div>
+                    <h3>Inclusive</h3>
+                    <p>We celebrate diversity with characters that represent all children</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">📚</div>
+                    <h3>Professional</h3>
+                    <p>Expert educators committed to academic excellence</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">💛</div>
+                    <h3>Warm</h3>
+                    <p>Approachable, caring, and optimistic in all interactions</p>
+                </div>
+                <div class="personality-card">
+                    <div class="icon">✨</div>
+                    <h3>Personalized</h3>
+                    <p>Every child's journey is unique and tailored to their needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section style="background: var(--brand-primary); padding: 40px 20px;">
+        <div class="container">
+            <h2 style="color: white; margin: 0;">Visual Identity</h2>
+        </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section>
+        <div class="container">
+            <h2>Color Palette</h2>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #cc9e00;"></div>
+                    <p class="color-name">Primary Accent</p>
+                    <p class="color-hex">#cc9e00</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #ffc500;"></div>
+                    <p class="color-name">Accent Hover</p>
+                    <p class="color-hex">#ffc500</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #737373;"></div>
+                    <p class="color-name">Body Text</p>
+                    <p class="color-hex">#737373</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #4d4d4d;"></div>
+                    <p class="color-name">Headings</p>
+                    <p class="color-hex">#4d4d4d</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #ffffff; border: 1px solid #ddd;"></div>
+                    <p class="color-name">Background</p>
+                    <p class="color-hex">#ffffff</p>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box" style="background: #fff9e6;"></div>
+                    <p class="color-name">Accent Background</p>
+                    <p class="color-hex">#fff9e6</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography -->
+    <section>
+        <div class="container">
+            <h2>Typography</h2>
+            <div class="typography-example">
+                <h1 class="type-h1">Heading 1 - Montserrat</h1>
+                <h2 class="type-h2">Heading 2 - Montserrat</h2>
+                <h3 class="type-h3">Heading 3 - Montserrat</h3>
+                <p class="type-body">Body Text - Lato, 1.5rem, line-height 1.8. This is how regular paragraphs and content will appear throughout Best Thrive's materials.</p>
+            </div>
+            <p style="margin-top: 30px;"><strong>Font Stack:</strong></p>
+            <ul style="margin-left: 40px;">
+                <li><strong>Headings:</strong> 'Montserrat', sans-serif (Google Fonts)</li>
+                <li><strong>Body:</strong> 'Lato', Arial, sans-serif (Google Fonts)</li>
+                <li><strong>Menu:</strong> 'Montserrat', UPPERCASE</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Logo Usage -->
+    <section>
+        <div class="container">
+            <h2>Logo Usage</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Best Thrive uses a text-based logo in Montserrat font. Here's how it appears on different backgrounds:</p>
+            <div class="logo-examples">
+                <div class="logo-example light-bg">
+                    <div class="logo-text">Best Thrive</div>
+                    <p>Logo on light background</p>
+                </div>
+                <div class="logo-example dark-bg">
+                    <div class="logo-text">Best Thrive</div>
+                    <p>Logo on dark background</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px;"><strong>Usage Guidelines:</strong></p>
+            <ul style="margin-left: 40px;">
+                <li>Always use Montserrat font for the logo text</li>
+                <li>Font size: 3.5rem (desktop), scale appropriately for mobile</li>
+                <li>Maintain adequate spacing around the logo (minimum 40px)</li>
+                <li>Use dark gray (#4d4d4d) on light backgrounds</li>
+                <li>Use white on dark backgrounds</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Design Elements -->
+    <section>
+        <div class="container">
+            <h2>Design Elements</h2>
+            <h3>Buttons</h3>
+            <div class="button-examples">
+                <button class="btn-primary">Primary Button</button>
+                <button class="btn-secondary">Secondary Button</button>
+            </div>
+
+            <h3 style="margin-top: 50px;">Design Patterns</h3>
+            <ul style="margin-left: 40px;">
+                <li><strong>Full-width sections</strong> with alternating background colors</li>
+                <li><strong>Box shadows</strong> for depth (0 2px 8px rgba(0,0,0,0.1))</li>
+                <li><strong>Border radius</strong> of 8px for cards and containers</li>
+                <li><strong>Gold accent borders</strong> (4px solid #cc9e00) for emphasis</li>
+                <li><strong>Generous padding</strong> and whitespace for breathing room</li>
+                <li><strong>Responsive grid layouts</strong> for card displays</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- AI Image Style Suggestions -->
+    <section>
+        <div class="container">
+            <h2>Style Suggestions for AI Generated Images</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Use these style prompts with AI image generators like DALL-E, Midjourney, or Stable Diffusion to create images that match Best Thrive's brand.</p>
+
+            <div class="style-suggestions-grid">
+                <div class="style-card">
+                    <h3>Warm Educational Photography</h3>
+                    <p>For authentic, welcoming imagery that feels real and relatable</p>
+                    <div id="style-1" class="style-prompt">Use warm, natural photography with soft lighting and authentic expressions. Keep the color palette bright and cheerful with golden yellow accents (#ffc500). Make it feel optimistic and uplifting with professional photographic quality. Use natural settings with diverse representation.</div>
+                    <button class="copy-btn" data-copy-target="style-1">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Playful Illustration Style</h3>
+                    <p>For fun, engaging graphics that appeal to children</p>
+                    <div id="style-2" class="style-prompt">Use a playful, colorful illustration style with rounded shapes and friendly characters. Incorporate golden yellow (#ffc500) and warm tones. Make it vibrant and energetic with clean vector art. Keep it whimsical but professional with inclusive character design.</div>
+                    <button class="copy-btn" data-copy-target="style-2">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Clean Educational Graphics</h3>
+                    <p>For infographics and educational materials</p>
+                    <div id="style-3" class="style-prompt">Use a modern, minimalist design with clean lines and simple shapes. Incorporate brand colors: golden yellow (#cc9e00), medium gray (#737373), dark gray (#4d4d4d). Make it professional and clear with flat design principles. Use geometric icons and ample whitespace.</div>
+                    <button class="copy-btn" data-copy-target="style-3">Click to Copy</button>
+                </div>
+
+                <div class="style-card">
+                    <h3>Warm Gradient Style</h3>
+                    <p>For backgrounds and accent elements</p>
+                    <div id="style-4" class="style-prompt">Use soft gradient backgrounds with warm golden yellow (#ffc500) transitioning to cream (#fff9e6). Keep it subtle and professional with smooth color transitions. Add subtle textures for depth without overpowering the design. Make it calming and uplifting.</div>
+                    <button class="copy-btn" data-copy-target="style-4">Click to Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section style="background: var(--brand-primary); padding: 40px 20px;">
+        <div class="container">
+            <h2 style="color: white; margin: 0;">Brand Voice</h2>
+        </div>
+    </section>
+
+    <!-- Key Messaging -->
+    <section>
+        <div class="container">
+            <h2>Key Messaging</h2>
+            <p><strong>Tagline:</strong> "Empowering children to thrive and succeed"</p>
+
+            <h3 style="margin-top: 40px;">Value Propositions</h3>
+            <ul class="value-props">
+                <li>We believe in the power of fun to transform lives and build engagement with learning</li>
+                <li>Personalized approach helps every child reach their full potential</li>
+                <li>Learning with diverse, representative characters that look like you</li>
+                <li>Building high self-esteem while achieving academic success</li>
+                <li>Expert educators committed to helping children from diverse backgrounds</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Target Audience</h3>
+            <p>Parents of children seeking personalized educational support. They value diversity, inclusion, and a fun approach to learning. They want their children to build confidence and self-esteem while achieving academic growth.</p>
+        </div>
+    </section>
+
+    <!-- Writing Style -->
+    <section>
+        <div class="container">
+            <h2>Writing Style</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;"><strong>Tone:</strong> Warm, optimistic, child-focused, professional yet approachable, empowering, and inclusive</p>
+
+            <div class="writing-grid">
+                <div class="writing-column do">
+                    <h3>✓ DO</h3>
+                    <ul>
+                        <li>Use warm, encouraging language</li>
+                        <li>Focus on children's potential and growth</li>
+                        <li>Emphasize fun and engagement</li>
+                        <li>Keep it simple and accessible for parents</li>
+                        <li>Highlight personalization and diversity</li>
+                        <li>Use positive, uplifting messaging</li>
+                        <li>Show authentic care for each child's journey</li>
+                    </ul>
+                </div>
+                <div class="writing-column dont">
+                    <h3>✗ DON'T</h3>
+                    <ul>
+                        <li>Use corporate jargon or formal language</li>
+                        <li>Sound intimidating or overly academic</li>
+                        <li>Ignore the importance of fun in learning</li>
+                        <li>Use generic educational platitudes</li>
+                        <li>Overlook the value of diversity and inclusion</li>
+                        <li>Make it about test scores instead of growth</li>
+                        <li>Talk down to parents or children</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 50px;">Example Copy</h3>
+            <div class="typography-example">
+                <p><strong>Good:</strong> "Watch your child's confidence soar as they discover the joy of learning with characters they can relate to. Our personalized approach makes every session fun, engaging, and built just for them."</p>
+                <p><strong>Avoid:</strong> "Best Thrive provides comprehensive educational services utilizing proven pedagogical methodologies to enhance student achievement metrics."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage Guidelines -->
+    <section>
+        <div class="container">
+            <h2>Usage Guidelines</h2>
+            <h3>Brand Consistency</h3>
+            <ul style="margin-left: 40px;">
+                <li>Always use the official brand colors (golden yellow #cc9e00 as primary accent)</li>
+                <li>Use Montserrat for all headings and Lato for body text</li>
+                <li>Maintain the warm, optimistic tone in all communications</li>
+                <li>Ensure diverse representation in all imagery</li>
+                <li>Keep messaging focused on empowerment and fun</li>
+                <li>Use proper spacing and whitespace for readability</li>
+                <li>Apply consistent border radius (8px) and shadows for depth</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Photography Guidelines</h3>
+            <ul style="margin-left: 40px;">
+                <li>Use authentic, warm images of diverse children</li>
+                <li>Show children engaged, happy, and confident</li>
+                <li>Use natural lighting and real settings</li>
+                <li>Avoid overly posed or stock-looking imagery</li>
+                <li>Include representative characters and diverse backgrounds</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Digital Applications</h3>
+            <ul style="margin-left: 40px;">
+                <li>Ensure mobile responsiveness in all designs</li>
+                <li>Use the golden yellow (#cc9e00) for call-to-action buttons</li>
+                <li>Maintain adequate contrast for accessibility</li>
+                <li>Keep navigation simple and intuitive</li>
+                <li>Use full-width sections with alternating backgrounds</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Best Thrive</strong></p>
+            <p>Rochester, New York, United States</p>
+            <p style="margin-top: 30px;" class="credit">Brand Guidelines prepared by Innovation Bound</p>
+            <p class="credit">Generated: October 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Click-to-copy functionality
+        function copyToClipboard (text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                var originalText = button.textContent
+                button.textContent = 'Copied!'
+                button.style.background = '#4caf50'
+
+                setTimeout(function() {
+                    button.textContent = originalText
+                    button.style.background = ''
+                }, 2000)
+            }).catch(function(err) {
+                console.error('Failed to copy:', err)
+                alert('Copy failed. Please try selecting and copying manually.')
+            })
+        }
+
+        // Add click handlers to all copy buttons
+        document.querySelectorAll('.copy-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var targetId = this.getAttribute('data-copy-target')
+                var textElement = document.getElementById(targetId)
+                var textToCopy = textElement.textContent || textElement.innerText
+                copyToClipboard(textToCopy, this)
+            })
+        })
+    </script>
+</body>
+</html>

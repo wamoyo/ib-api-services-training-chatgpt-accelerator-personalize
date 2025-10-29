@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Guest Prospects for Best Thrive</title>
+
+    <!-- Google Fonts - Match Brand Guidelines -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Best Thrive Brand Colors */
+            --brand-primary: #cc9e00;
+            --brand-primary-hover: #ffc500;
+            --brand-text: #737373;
+            --brand-heading: #4d4d4d;
+            --brand-background: #ffffff;
+            --brand-accent-bg: #fff9e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', Arial, sans-serif;
+            line-height: 1.8;
+            color: var(--brand-text);
+            background: var(--brand-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-primary-hover) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+        }
+
+        section:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--brand-heading);
+            margin-bottom: 15px;
+        }
+
+        /* Benefit Cards */
+        .benefit-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--brand-primary);
+        }
+
+        .benefit-card h3 {
+            color: var(--brand-primary);
+            margin-bottom: 15px;
+        }
+
+        /* Customer Details */
+        .customer-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .detail-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .detail-card h3 {
+            color: var(--brand-primary);
+            margin-bottom: 15px;
+        }
+
+        .detail-card ul {
+            margin-left: 20px;
+        }
+
+        .detail-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Prospect Cards */
+        .prospects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .prospect-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--brand-primary);
+        }
+
+        .prospect-title {
+            font-style: italic;
+            color: var(--brand-text);
+            margin-bottom: 20px;
+        }
+
+        .prospect-details {
+            margin-top: 20px;
+        }
+
+        .prospect-details p {
+            margin-bottom: 12px;
+        }
+
+        .content-summary {
+            background: var(--brand-accent-bg);
+            padding: 15px;
+            border-left: 3px solid var(--brand-primary);
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .prospect-details a {
+            color: var(--brand-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .prospect-details a:hover {
+            color: var(--brand-primary-hover);
+            text-decoration: underline;
+        }
+
+        /* Copy Button */
+        .copy-btn {
+            background: var(--brand-primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 15px 0;
+        }
+
+        .copy-btn:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        /* Message Box */
+        .message-box {
+            background: white;
+            border: 2px solid var(--brand-primary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .message-box pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        /* Training Section */
+        .training-cta {
+            background: var(--brand-accent-bg);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--brand-primary);
+            margin-top: 30px;
+        }
+
+        .training-cta h3 {
+            color: var(--brand-primary);
+            margin-bottom: 20px;
+        }
+
+        .training-cta ul {
+            margin: 20px 0 20px 25px;
+        }
+
+        .training-cta li {
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--brand-primary);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--brand-primary-hover);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--brand-heading);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .credit {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .benefit-cards,
+            .customer-details,
+            .prospects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Podcast Guest Prospects for Best Thrive</h1>
+        <p class="subtitle">Curated Guests + Outreach Templates | Prepared by Innovation Bound</p>
+    </header>
+
+    <!-- Why Podcasting -->
+    <section class="why-podcasting">
+        <div class="container">
+            <h2>Why Podcasting Works for Your Business</h2>
+
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Hosting a podcast lets you have authentic, long-form conversations with people who network with your ideal customers—parents seeking personalized, inclusive educational support for their children.</p>
+
+            <div class="benefit-cards">
+                <div class="benefit-card">
+                    <h3>🎯 Direct Access to Your Market</h3>
+                    <p>Your guests bring their audience—parents, educators, and community leaders—directly to your show and your brand.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>🤝 Build Strategic Partnerships</h3>
+                    <p>60-90 minute conversations create deeper relationships than any networking event, opening doors to referrals and collaborations.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>📈 Content That Works for You</h3>
+                    <p>One episode becomes blog posts, social media content, email newsletters, and video clips—all highlighting your expertise.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <h3>💼 Position as Industry Authority</h3>
+                    <p>Hosting a show elevates your credibility in Rochester's education community and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Customers -->
+    <section class="target-customers">
+        <div class="container">
+            <h2>Your Target Customers</h2>
+
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">Parents of children from diverse backgrounds in Rochester, NY seeking personalized educational support that builds both academic skills and self-esteem while making learning fun.</p>
+
+            <div class="customer-details">
+                <div class="detail-card">
+                    <h3>Target Parents</h3>
+                    <p>Parents who value:</p>
+                    <ul>
+                        <li>Personalized learning approaches</li>
+                        <li>Diversity and representation in education</li>
+                        <li>Building confidence alongside academics</li>
+                        <li>Fun, engaging learning experiences</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Geographic Focus</h3>
+                    <p>Rochester, New York area families seeking local, community-focused educational enrichment services.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Key Challenges Parents Face</h3>
+                    <ul>
+                        <li>Finding tutoring that celebrates diversity</li>
+                        <li>Generic approaches that don't engage their child</li>
+                        <li>Lack of representation in learning materials</li>
+                        <li>Balancing academic growth with self-esteem</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Prospects -->
+    <section class="prospects-section">
+        <div class="container">
+            <h2>Your Top 5 Podcast Guest Prospects</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">These individuals either are your target customers or network directly with them. Each prospect has a personalized outreach message ready to send that references specific content they created.</p>
+
+            <div class="prospects-grid">
+                <!-- Prospect 1 -->
+                <div class="prospect-card">
+                    <h3>Emily Garrick</h3>
+                    <p class="prospect-title">Educator & Diversity Advocate | M.S. TESOL, M.S. Literacy</p>
+
+                    <div class="prospect-details">
+                        <p><strong>Content They Posted:</strong></p>
+                        <p class="content-summary">"Teaching English to 5th and 6th graders from diverse backgrounds requires more than just language instruction—it requires seeing and celebrating each student's culture and identity in the classroom."</p>
+                        <p><a href="https://www.linkedin.com/in/emilygarrick/" target="_blank">View LinkedIn Profile »</a></p>
+
+                        <p><strong>Why She's a Great Fit:</strong> Educator and advocate for diversity, equity, inclusion, and justice in Rochester. Works directly with diverse student populations and their families—exactly your target customers.</p>
+
+                        <p><strong>Outreach Message:</strong></p>
+                        <button class="copy-btn" data-copy-target="message-1">Click to Copy Message</button>
+                        <div class="message-box">
+                            <pre id="message-1">Hi Emily,
+
+I loved what you said about seeing and celebrating each student's culture and identity in the classroom. That really resonated with me because at Best Thrive, we believe representation matters in every aspect of learning.
+
+Would you like to be the next guest on my podcast to talk about diversity in education and other passions/interests? I think my audience of parents and educators would really benefit from your insights.
+
+Let me know if you're interested!
+
+Best,
+Sharifa</pre>
+                        </div>
+
+                        <p><strong>LinkedIn Profile:</strong> <a href="https://www.linkedin.com/in/emilygarrick/" target="_blank">linkedin.com/in/emilygarrick</a></p>
+                    </div>
+                </div>
+
+                <!-- Prospect 2 -->
+                <div class="prospect-card">
+                    <h3>Lynne Rerucha</h3>
+                    <p class="prospect-title">Owner of Milk & Cookies Tutoring | 35 Years in Education</p>
+
+                    <div class="prospect-details">
+                        <p><strong>Content They Posted:</strong></p>
+                        <p class="content-summary">"After 35 years in education, I've learned that literacy isn't just about reading skills—it's about giving children the confidence to express themselves and see themselves as capable learners."</p>
+                        <p><a href="https://www.linkedin.com/in/lynne-rerucha-08a38a97/" target="_blank">View LinkedIn Profile »</a></p>
+
+                        <p><strong>Why She's a Great Fit:</strong> Fellow tutoring business owner in Rochester with decades of experience. Networks with the same parent audience and shares your values about building confidence alongside skills.</p>
+
+                        <p><strong>Outreach Message:</strong></p>
+                        <button class="copy-btn" data-copy-target="message-2">Click to Copy Message</button>
+                        <div class="message-box">
+                            <pre id="message-2">Hi Lynne,
+
+I loved what you said about literacy being more than just reading skills—it's about giving children confidence to see themselves as capable learners. That perfectly captures what we're trying to do at Best Thrive.
+
+Would you like to be the next guest on my podcast to talk about that and other passions/interests? I think my audience of parents would really benefit from your 35 years of wisdom.
+
+Let me know if you're interested!
+
+Best,
+Sharifa</pre>
+                        </div>
+
+                        <p><strong>LinkedIn Profile:</strong> <a href="https://www.linkedin.com/in/lynne-rerucha-08a38a97/" target="_blank">linkedin.com/in/lynne-rerucha-08a38a97</a></p>
+                    </div>
+                </div>
+
+                <!-- Prospect 3 -->
+                <div class="prospect-card">
+                    <h3>Henry Lane</h3>
+                    <p class="prospect-title">Founder of Tutoring Match & Learning Core, LLC</p>
+
+                    <div class="prospect-details">
+                        <p><strong>Content They Posted:</strong></p>
+                        <p class="content-summary">"Empowering students means using various tutoring approaches to meet them where they are and provide challenging paths forward—not a one-size-fits-all solution."</p>
+                        <p><a href="https://www.linkedin.com/in/tutoringmatch/" target="_blank">View LinkedIn Profile »</a></p>
+
+                        <p><strong>Why He's a Great Fit:</strong> Rochester-based tutoring business owner who shares your belief in personalized approaches. Networks with parents seeking customized educational support.</p>
+
+                        <p><strong>Outreach Message:</strong></p>
+                        <button class="copy-btn" data-copy-target="message-3">Click to Copy Message</button>
+                        <div class="message-box">
+                            <pre id="message-3">Hi Henry,
+
+I loved what you said about empowering students through various tutoring approaches instead of one-size-fits-all solutions. That's exactly the philosophy we follow at Best Thrive—personalized learning that meets each child where they are.
+
+Would you like to be the next guest on my podcast to talk about that and other passions/interests? I think my audience would really benefit from your insights on personalized education.
+
+Let me know if you're interested!
+
+Best,
+Sharifa</pre>
+                        </div>
+
+                        <p><strong>LinkedIn Profile:</strong> <a href="https://www.linkedin.com/in/tutoringmatch/" target="_blank">linkedin.com/in/tutoringmatch</a></p>
+                    </div>
+                </div>
+
+                <!-- Prospect 4 -->
+                <div class="prospect-card">
+                    <h3>Vanessa Mullins</h3>
+                    <p class="prospect-title">Reading Tutor | Science of Reading Advocate</p>
+
+                    <div class="prospect-details">
+                        <p><strong>Content They Posted:</strong></p>
+                        <p class="content-summary">"Over a decade as a small business owner taught me that reading instruction has to be evidence-based AND engaging. Science of Reading works when kids actually want to show up and learn."</p>
+                        <p><a href="https://www.linkedin.com/in/vkmullins/" target="_blank">View LinkedIn Profile »</a></p>
+
+                        <p><strong>Why She's a Great Fit:</strong> Rochester reading specialist who combines evidence-based instruction with engagement—perfectly aligned with your approach of making learning both effective and fun.</p>
+
+                        <p><strong>Outreach Message:</strong></p>
+                        <button class="copy-btn" data-copy-target="message-4">Click to Copy Message</button>
+                        <div class="message-box">
+                            <pre id="message-4">Hi Vanessa,
+
+I loved what you said about Science of Reading working when kids actually want to show up and learn. At Best Thrive, we believe the power of fun transforms lives—evidence-based instruction works best when children are engaged!
+
+Would you like to be the next guest on my podcast to talk about that and other passions/interests? I think my audience of parents would really benefit from your insights.
+
+Let me know if you're interested!
+
+Best,
+Sharifa</pre>
+                        </div>
+
+                        <p><strong>LinkedIn Profile:</strong> <a href="https://www.linkedin.com/in/vkmullins/" target="_blank">linkedin.com/in/vkmullins</a></p>
+                    </div>
+                </div>
+
+                <!-- Prospect 5 -->
+                <div class="prospect-card">
+                    <h3>Rochester Mom Collective</h3>
+                    <p class="prospect-title">Community Leaders & Parent Bloggers</p>
+
+                    <div class="prospect-details">
+                        <p><strong>Content They Posted:</strong></p>
+                        <p class="content-summary">"Rochester moms are looking for more than just tutoring—we want educational partners who understand our children's unique needs and celebrate what makes them special."</p>
+                        <p><a href="https://rochestermomcollective.com/" target="_blank">View Website »</a></p>
+
+                        <p><strong>Why They're a Great Fit:</strong> Community of Rochester parents—your exact target customers. They have a platform to reach hundreds of local families seeking educational resources.</p>
+
+                        <p><strong>Outreach Message:</strong></p>
+                        <button class="copy-btn" data-copy-target="message-5">Click to Copy Message</button>
+                        <div class="message-box">
+                            <pre id="message-5">Hi there,
+
+I loved what you said about Rochester moms looking for educational partners who celebrate what makes each child special. That's exactly what we do at Best Thrive—personalized learning with diverse, representative characters kids can relate to.
+
+Would you or one of your community members like to be the next guest on my podcast to talk about parenting, education, and other passions/interests? I think my audience would really benefit from your perspective.
+
+Let me know if you're interested!
+
+Best,
+Sharifa</pre>
+                        </div>
+
+                        <p><strong>Website:</strong> <a href="https://rochestermomcollective.com/" target="_blank">rochestermomcollective.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Section -->
+    <section class="training-section">
+        <div class="container">
+            <h2>Master the Complete Podcast Outreach Tactic</h2>
+
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">Innovation Bound's podcast outreach system achieves a <strong>28% positive response rate</strong> from cold outreach. This isn't just about hosting a podcast—it's a complete marketing and partnership strategy.</p>
+
+            <div class="training-cta">
+                <h3>Get the Full Training</h3>
+                <p>Learn the complete step-by-step process:</p>
+                <ul>
+                    <li>How to prospect and identify ideal guests (including automation with ChatGPT Deep Research)</li>
+                    <li>Messaging techniques that get 28% positive replies (and how one employee got 50%)</li>
+                    <li>Running prep sessions and drafting questions with AI</li>
+                    <li>Recording, producing, and editing your podcast with AI tools</li>
+                    <li>The critical follow-up strategy (understanding reciprocity and lead magnets)</li>
+                    <li>Nurturing your network long-term for referrals and partnerships</li>
+                </ul>
+
+                <a href="https://www.innovationbound.com/chatgpt-training/podcast-invite-marketing-tactic-with-ai" class="cta-button" target="_blank">
+                    View Complete Training »
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Best Thrive</strong> - Empowering children to thrive and succeed</p>
+            <p class="credit">Prepared by Innovation Bound | This is 5 of 5 Customized AI Demos</p>
+        </div>
+    </footer>
+
+    <script>
+        // Side effect: Copies outreach message to clipboard
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                var originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = '#4caf50';
+
+                setTimeout(function() {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy:', err);
+                alert('Failed to copy. Please select and copy manually.');
+            });
+        }
+
+        // Add click handlers to all copy buttons
+        document.querySelectorAll('.copy-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var targetId = this.getAttribute('data-copy-target');
+                var textElement = document.getElementById(targetId);
+                var textToCopy = textElement.textContent || textElement.innerText;
+                copyToClipboard(textToCopy, this);
+            });
+        });
+    </script>
+</body>
+</html>

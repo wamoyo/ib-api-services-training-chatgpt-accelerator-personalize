@@ -23,14 +23,14 @@ personalize/
 │       │   ├── fonts/ (if needed)
 │       │   └── brand-research.md
 │       └── deliverables/
-│           ├── brand-guidelines-for-{email-slug}/
+│           ├── brand-guidelines/
 │           │   ├── index.html (self-contained)
 │           │   ├── logo.png (deployed)
 │           │   └── fonts/ (if Google Fonts fails)
-│           ├── 100-ideas-for-{email-slug}/
-│           ├── competitor-report-for-{email-slug}/
-│           ├── writing-style-guide-for-{email-slug}/
-│           └── podcast-list-for-{email-slug}/
+│           ├── 100-ideas/
+│           ├── competitor-report/
+│           ├── writing-style-guide/
+│           └── podcast-list/
 ├── templates/
 │   ├── brand-guidelines/
 │   ├── 100-ideas/
@@ -43,37 +43,54 @@ personalize/
 
 ## Email Slug Naming Convention
 
-All client folders and deliverable URLs use **URL encoding** for email addresses to guarantee uniqueness.
+All client folders and deliverable URLs use **hex hash slugs** (first 12 characters of SHA256) for clean, collision-free URLs.
 
-Use JavaScript's `encodeURIComponent()` for email addresses:
+Use Node's `crypto` module to generate the hash:
 
 ```javascript
-// Pure: converts email to URL-safe slug
+import { createHash } from 'crypto'
+
+// Pure: converts email to hex hash slug (first 12 chars of SHA256)
 function emailToSlug (email) {
-  return encodeURIComponent(email.toLowerCase())
+  return createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
 }
 ```
 
-**Examples:**
-- `costa@trollhair.com` → `costa%40trollhair.com`
-- `John.Doe@Company.com` → `john.doe%40company.com`
-- `sales+info@tech-startup.io` → `sales%2Binfo%40tech-startup.io`
+**Example:**
+```javascript
+import { createHash } from 'crypto'
+
+// Example calculation
+var email = 'example@company.com'
+var slug = createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
+console.log(slug) // Output: 8e5e16f6e873
+```
+
+**Why hex hash?**
+- Clean URLs (no special characters, no double-encoding issues)
+- Guaranteed unique (SHA256 collision-resistant)
+- Works everywhere (emails, social media, texts)
+- URL-safe (alphanumeric only)
 
 **File Paths:**
 ```
-client-folders/costa%40trollhair.com/
-deliverables/brand-guidelines-for-costa%40trollhair.com/
+client-folders/{emailSlug}/
+deliverables/brand-guidelines/
 ```
 
 **URLs:**
 ```
-https://www.innovationbound.com/private/five-customized-ai-demos/brand-guidelines-for-costa%40trollhair.com/
+https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/brand-guidelines/
 ```
 
 **S3 Paths:**
 ```
-s3://www.innovationbound.com/private/five-customized-ai-demos/brand-guidelines-for-costa%40trollhair.com/
+s3://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/brand-guidelines/
 ```
+
+Where `{emailSlug}` is calculated using the `emailToSlug()` function shown above.
+
+**Mapping:** The email→slug mapping is stored in each client's CLAUDE.md file and in the main tracking table.
 
 ## Deliverable Structure
 
@@ -133,6 +150,21 @@ Each deliverable is a **folder** containing:
 
 ## Workflow
 
+## ⚠️ CRITICAL: Build Order and Branding Consistency
+
+**ALWAYS build deliverables in this order:**
+
+1. **Brand Guidelines FIRST** - This extracts the client's actual colors, fonts, logo, and design patterns
+2. **All other deliverables** - Use the brand guidelines as the styling source
+
+**Each client's deliverables must follow THEIR brand, not Innovation Bound's brand or generic styling.**
+
+When building deliverables #2-5:
+- Open `brand-guidelines/index.html` to see their colors, fonts, design patterns
+- Copy CSS variables from their brand guidelines
+- Match their visual style (professional, playful, technical, etc.)
+- DON'T use prescriptive Innovation Bound styling
+
 ### Step 1: Check Stats
 
 ```bash
@@ -159,10 +191,11 @@ npm run loadup 10
 ### Step 3: Build Deliverables
 
 Use Claude Code to build 5 resources for each client:
-1. Open `personalize/` directory in Claude Code
-2. Work through each client folder independently (parallel work)
-3. Check off deliverables in each client's `CLAUDE.md`
-4. Deploy to S3 when ready
+1. **Start with Brand Guidelines** (always first!)
+2. Use brand guidelines as styling source for all other deliverables
+3. Work through each client folder independently (parallel work possible)
+4. Check off deliverables in each client's `CLAUDE.md`
+5. Deploy to S3 when ready
 
 ### Step 4: Test Email
 
@@ -222,15 +255,25 @@ client-folders/{email-slug}/
 - `research/logo.png` - Company logo
 - `research/brand-research.md` - All findings documented
 
-### Step 2: Build Deliverables (One at a Time)
+### Step 2: Build Deliverables (In Order!)
 
-For each deliverable:
-1. Copy template to `deliverables/{resource}-for-{email-slug}/`
+**BUILD ORDER MATTERS!** Always build brand guidelines first, then use it for styling all others.
+
+**Deliverable #1: Brand Guidelines (FIRST)**
+1. Extract client's actual colors, fonts, logo from their website
+2. Create brand guidelines that showcase THEIR brand
+3. This becomes the styling source for all other deliverables
+
+**Deliverables #2-5: Use Client's Brand Guidelines**
+For each remaining deliverable:
+1. **READ `brand-guidelines/index.html` first** to see their colors, fonts, design patterns
 2. Follow template's `CLAUDE.md` instructions
-3. Use research data to populate content
-4. Take screenshots with `tools/screenshot.js`
-5. Iterate until perfect
-6. Mark complete in client's CLAUDE.md
+3. **Copy CSS variables from their brand guidelines** (don't make up colors/fonts)
+4. Match their visual style (professional, playful, technical, etc.)
+5. Use research data to populate content
+6. Take screenshots with `tools/screenshot.js`
+7. Iterate until perfect
+8. Mark complete in client's CLAUDE.md
 
 ### Step 3: Deploy to S3
 
@@ -238,9 +281,14 @@ Each deliverable folder uploads to S3 (bypasses Pug build process):
 
 **Command:**
 ```bash
+npm run bootup costa@trollhair.com
+```
+
+Or manually (replace {emailSlug} with calculated hash):
+```bash
 aws s3 sync \
-  client-folders/costa%40trollhair.com/deliverables/brand-guidelines-for-costa%40trollhair.com/ \
-  s3://www.innovationbound.com/private/five-customized-ai-demos/brand-guidelines-for-costa%40trollhair.com/ \
+  client-folders/{emailSlug}/deliverables/ \
+  s3://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/ \
   --profile ibound \
   --region us-east-1
 ```
@@ -251,7 +299,7 @@ aws s3 sync \
 
 **Public URL:**
 ```
-https://www.innovationbound.com/private/five-customized-ai-demos/brand-guidelines-for-costa%40trollhair.com/
+https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/brand-guidelines/
 ```
 
 S3 automatically serves `index.html` when accessing the folder URL.
@@ -265,8 +313,10 @@ S3 automatically serves `index.html` when accessing the folder URL.
 ```markdown
 | Client Email | Email Slug | Status | Deliverables | Deployed |
 |--------------|------------|--------|--------------|----------|
-| costa@trollhair.com | costa%40trollhair.com | In Progress | 2/5 | No |
+| example@company.com | {calculated-slug} | In Progress | 2/5 | No |
 ```
+
+The Email Slug is calculated using `emailToSlug(email)` function.
 
 ### Per-Client Tracking
 
@@ -306,7 +356,7 @@ Each `client-folders/{email-slug}/CLAUDE.md` has checklist:
 **screenshot-fullpage.js** - For verifying our deliverables:
 - Takes full-page screenshots (compressed if tall)
 - Use to check nothing is cut off in our HTML
-- Example: `node screenshot-fullpage.js ../client-folders/{email-slug}/deliverables/brand-guidelines-for-{email-slug}/index.html`
+- Example: `node screenshot-fullpage.js ../client-folders/{email-slug}/deliverables/brand-guidelines/index.html`
 
 Puppeteer installed at system level.
 

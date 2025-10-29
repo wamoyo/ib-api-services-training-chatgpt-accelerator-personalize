@@ -2,6 +2,22 @@
 
 Instructions for building personalized "100 Ideas to Grow Your Business with AI" pages.
 
+## ⚠️ CRITICAL: Use Client's Brand Guidelines
+
+**This deliverable must follow the client's brand guidelines created in deliverable #1.**
+
+Before starting, READ:
+- `../brand-guidelines/index.html` - See their colors, fonts, and design patterns
+- `../../research/brand-research.md` - Review documented brand details
+
+Use their:
+- **Colors** (exact hex codes from brand guidelines)
+- **Fonts** (same font families)
+- **Design patterns** (buttons, cards, spacing that matches their brand)
+- **Visual style** (professional, playful, technical, etc.)
+
+**DO NOT use generic Innovation Bound styling or make up your own colors/fonts.**
+
 ## Overview
 
 Build a single-page HTML website with 100 actionable AI ideas tailored to the client's specific business, industry, and customers. Each idea has a checkbox, and checked ideas automatically populate a custom AI prompt at the bottom for expansion.
@@ -9,7 +25,7 @@ Build a single-page HTML website with 100 actionable AI ideas tailored to the cl
 ## Output
 
 Self-contained HTML file with:
-- Inline CSS matching their brand (colors, fonts from brand guidelines research)
+- Inline CSS matching their brand (colors, fonts from brand guidelines)
 - Inline JavaScript for checkbox handling and dynamic prompt generation
 - 100 ideas organized by category (6-8 categories)
 - Each idea: checkbox, bold title, 1-2 sentence description
@@ -20,7 +36,7 @@ Self-contained HTML file with:
 ### 1.1 Understand the Business
 
 Use the research already done for brand guidelines:
-- Read `research/brand-research.md`
+- Read `../../research/brand-research.md`
 - Review website screenshots
 - Understand their products/services, customers, industry
 
@@ -248,81 +264,56 @@ Replace the placeholders in `getCompanyContext()`:
 - `[1 sentence about target customers]` - Who they serve
 - `[1 sentence about what they offer]` - Products/services
 
-## Phase 5: Styling with Brand
+## Phase 5: Styling with Client's Brand
 
-### 5.1 Use Brand Colors
+### 5.1 Extract Colors from Brand Guidelines
+
+Open `../brand-guidelines/index.html` and copy the exact CSS variables:
 
 ```css
 :root {
-  --primary-color: #hexcode; /* From brand guidelines */
+  /* Copy these EXACT values from brand-guidelines/index.html */
+  --primary-color: #hexcode;
   --secondary-color: #hexcode;
   --accent-color: #hexcode;
+  /* Add any other colors they defined */
 }
+```
 
+Apply to buttons, cards, and interactive elements to match their brand.
+
+### 5.2 Use Their Fonts
+
+Copy the exact Google Fonts link and font-family from brand-guidelines:
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=TheirFont&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'TheirFont', Arial, sans-serif; /* Use their actual font */
+}
+</style>
+```
+
+### 5.3 Match Their Design Patterns
+
+Look at how cards, buttons, and spacing are styled in brand-guidelines, then replicate that aesthetic:
+
+```css
+/* Example structure - adapt to match THEIR brand, not this generic example */
 .idea-card {
-  border-left: 3px solid var(--accent-color);
+  /* Use spacing, colors, borders that match their brand guidelines */
 }
 
 .copy-btn {
+  /* Style to match buttons in their brand guidelines */
   background: var(--primary-color);
   color: white;
 }
 ```
 
-### 5.2 Use Brand Fonts
-
-```html
-<link href="https://fonts.googleapis.com/css2?family=FontName&display=swap" rel="stylesheet">
-
-<style>
-body {
-  font-family: 'FontName', Arial, sans-serif;
-}
-</style>
-```
-
-### 5.3 Checkbox Styling
-
-```css
-.idea-card {
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 8px;
-  border-left: 3px solid var(--accent-color);
-  margin-bottom: 1rem;
-  transition: all 0.3s;
-}
-
-.idea-card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.idea-checkbox {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-.idea-card label {
-  cursor: pointer;
-  flex: 1;
-}
-
-.idea-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.idea-card p {
-  color: #555;
-  line-height: 1.5;
-}
-```
+**IMPORTANT:** Don't copy these CSS examples verbatim. Study their brand guidelines and create CSS that matches THEIR visual style.
 
 ## Success Criteria
 

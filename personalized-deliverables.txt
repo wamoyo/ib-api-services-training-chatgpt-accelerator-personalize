@@ -1,21 +1,55 @@
+📑 5 CUSTOMIZED AI DEMOS
 
-// TODO for Claude Code: Make sure to adapt the html email content into this one. See below for example of what it looks like.
+Here are 5 resources built for {{company}} as proof that AI can grow your business:
 
-💵 {{grantedAmount}} SCHOLARSHIP
+1. Brand Guidelines Document + AI That Follows Your Brand:
+   {{company}} Brand Guidelines »
+   https://www.innovationbound.com/private/five-customized-ai-demos/{{emailSlug}}/brand-guidelines/index.html
 
-Good news... Your scholarship is larger than you requested. Please, secure your
-spot in the next 12 days (by {{date}}).
+2. 100 Ideas On How To Use AI To Grow Your Business:
+   {{company}} AI Growth Ideas + Custom Prompts »
+   https://www.innovationbound.com/private/five-customized-ai-demos/{{emailSlug}}/100-ideas/index.html
 
-The total program cost for the 2026 AI Accelerator is $30,000. You have a
-partial scholarship of {{grantedAmount}}. Your total fee comes to {{fee}} for
-the full 12-month program for you and up to 9 of your employees. Additional
-seats, if you need them, are {{additionalSeatCost}}.
+3. Competitor Report + How To Use ChatGPT To Track Competitors:
+   {{company}} Competitor Report »
+   https://www.innovationbound.com/private/five-customized-ai-demos/{{emailSlug}}/competitor-report/index.html
 
-Use the link below to get the full program PDF, all your scholarship details,
-and to reserve your spot.
+4. Writing Style Guide For On Brand Written Content:
+   {{company}} Writing Style Guide »
+   https://www.innovationbound.com/private/five-customized-ai-demos/{{emailSlug}}/writing-style-guide/index.html
 
-💻 JOIN THE ACCELERATOR »
-https://www.innovationbound.com/private/2026-ai-accelerator-payment?{{paymentParams}}
+5. Short List Of Podcast Guests + Podcast Marketing Training:
+   {{company}} Podcast Guest List »
+   https://www.innovationbound.com/private/five-customized-ai-demos/{{emailSlug}}/podcast-list/index.html
+
+Click the link below to get all 5 resources we built for you:
+
+📑 Get My 5 Resources »
+https://www.innovationbound.com/private/five-customized-ai-demos?applicant={{email}}&name={{name}}&tier=scholarship&company={{company}}
+
+⚠️ Important note from our Founder:
+
+Costa here... I have been a consultant for NASA and Fortune 500s. The 5 resources above used to take 15 to 30 hours to create for a business.
+
+Today, if you know how to use AI... 30 to 50 minutes.
+
+This is a 1,800% productivity boost...minimum.
+
+Put simply: Business owners and their employees must learn how to use modern AI tools to keep up with the competition.
+
+The reason we built these demos for you, however, is to prove 2 things to you:
+
+1. That AI, used skillfully, can add real value to your business.
+2. We at Innovation Bound are great trainers who will guide you to AI Mastery and help grow your business.
+
+My team and I can't wait to go to work for you.
+
+LET'S GET YOU STARTED...
+
+Use the link below to see the full program overview and book your team's spot in the Accelerator:
+
+🚀 Full Program Overview & Enrollment »
+https://www.innovationbound.com/private/2026-ai-accelerator-payment?applicant={{email}}&name={{name}}&tier=scholarship
 
 Simply reply to this email with any questions, or call/text us at (212) 206-1401.
 
@@ -23,13 +57,7 @@ We are thrilled to help grow your business with AI,
 The Innovation Bound Team
 support@innovationbound.com
 
-PS: Here are your application details:
-- Name: {{name}}
-- Email: {{email}}
-- Company Website: {{website}}
-- LinkedIn Profile: {{linkedin}}
-- Financial Assistance Requested: {{percentage}}% ({{amount}})
-- Financial Assistance Granted: {{grantedPercentage}}% ({{grantedAmount}})
+PS: It was a joy learning about your business, and it would be our pleasure to have you join our training program.
 
 --------------------------------------------------------------------------------
 
@@ -42,3 +70,4 @@ To check your email settings with us visit »
 Visit Innovation Bound's AI Accelerator application page where this email originated »
 www.InnovationBound.com/chatgpt-training/small-business-ai-accelerator
 
+Postal address: 7903 Seminole BLVD, Seminole FL 33772

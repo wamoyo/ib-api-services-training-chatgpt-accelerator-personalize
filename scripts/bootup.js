@@ -6,12 +6,13 @@ import { spawn } from 'child_process'
 import { existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { createHash } from 'crypto'
 
 var __dirname = dirname(fileURLToPath(import.meta.url))
 
-// Pure: converts email to URL-safe slug
+// Pure: converts email to hex hash slug (first 12 chars of SHA256)
 function emailToSlug (email) {
-  return encodeURIComponent(email.toLowerCase())
+  return createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
 }
 
 // Side effect: Runs AWS S3 sync command
@@ -102,7 +103,9 @@ async function bootup () {
   try {
     await syncToS3(deliverablesPath, s3Path)
 
+    console.log('\n✓ Files synced to S3')
     console.log('\n✓ Deployment successful!\n')
+    console.log('Note: URLs must include trailing slash because deliverables contain assets (logo.png, etc.)\n')
     console.log('URLs:')
     existing.forEach(function(deliverable) {
       var url = `https://www.innovationbound.com/private/five-customized-ai-demos/${emailSlug}/${deliverable}/`

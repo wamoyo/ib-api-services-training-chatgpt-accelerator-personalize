@@ -7,6 +7,7 @@ import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses'
 import { readFile, writeFile } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { createHash } from 'crypto'
 
 var __dirname = dirname(fileURLToPath(import.meta.url))
 var dynamoDb = new DynamoDBClient({ region: 'us-east-1' })
@@ -14,9 +15,9 @@ var db = DynamoDBDocumentClient.from(dynamoDb)
 var ses = new SESClient({ region: 'us-east-1' })
 var replyToAddress = "Innovation Bound <support@innovationbound.com>"
 
-// Pure: converts email to URL-safe slug
+// Pure: converts email to hex hash slug (first 12 chars of SHA256)
 function emailToSlug (email) {
-  return encodeURIComponent(email.toLowerCase())
+  return createHash('sha256').update(email.toLowerCase()).digest('hex').substring(0, 12)
 }
 
 // Pure: extracts ready clients from tracking markdown
@@ -28,7 +29,7 @@ function getReadyClients (tracking) {
     if (line.includes('| Ready |')) {
       var parts = line.split('|').map(p => p.trim())
       if (parts[1] && parts[1] !== 'Client Email') {
-        readyClients.push(parts[1])
+        readyClients.push(parts[1].toLowerCase())
       }
     }
   }

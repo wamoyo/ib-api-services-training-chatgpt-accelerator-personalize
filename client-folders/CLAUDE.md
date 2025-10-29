@@ -6,7 +6,8 @@ Progress tracking for all AI Accelerator personalized deliverables.
 
 | Client Email | Email Slug | Status | Deliverables Complete | Deployed to S3 | Email Sent |
 |--------------|------------|--------|-----------------------|----------------|------------|
-| - | - | - | 0/5 | No | No |
+| sharifawhitt@gmail.com | a46ed8fe0002 | Deployed | 5/5 | Yes | No |
+| co@nakiadwhittaker.com | ba8960050ac2 | Deployed | 5/5 | Yes | No |
 
 ## Status Values
 
@@ -21,11 +22,11 @@ Progress tracking for all AI Accelerator personalized deliverables.
 
 Each client needs 5 deliverables:
 
-1. **Brand Guidelines** - `brand-guidelines-for-{email-slug}/`
-2. **100 AI Ideas** - `100-ideas-for-{email-slug}/`
-3. **Competitor Report** - `competitor-report-for-{email-slug}/`
-4. **Writing Style Guide** - `writing-style-guide-for-{email-slug}/`
-5. **Podcast Guest List** - `podcast-list-for-{email-slug}/`
+1. **Brand Guidelines** - `brand-guidelines/`
+2. **100 AI Ideas** - `100-ideas/`
+3. **Competitor Report** - `competitor-report/`
+4. **Writing Style Guide** - `writing-style-guide/`
+5. **Podcast Guest List** - `podcast-list/`
 
 ## Adding a New Client
 

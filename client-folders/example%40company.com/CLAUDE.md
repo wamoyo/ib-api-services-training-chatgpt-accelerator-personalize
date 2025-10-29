@@ -62,12 +62,21 @@ Email Slug: `example%40company.com`
 
 ## S3 URLs
 
-Once deployed, list URLs here:
-- Brand Guidelines: `https://www.innovationbound.com/private/five-customized-ai-demos/brand-guidelines-for-example%40company.com/`
-- 100 Ideas: `https://www.innovationbound.com/private/five-customized-ai-demos/100-ideas-for-example%40company.com/`
-- Competitor Report: `https://www.innovationbound.com/private/five-customized-ai-demos/competitor-report-for-example%40company.com/`
-- Writing Style Guide: `https://www.innovationbound.com/private/five-customized-ai-demos/writing-style-guide-for-example%40company.com/`
-- Podcast List: `https://www.innovationbound.com/private/five-customized-ai-demos/podcast-list-for-example%40company.com/`
+**CALCULATE THE SLUG:** Use the email address from "# Client: EMAIL" at the top of this file:
+
+```javascript
+import { createHash } from 'crypto'
+var clientEmail = 'EMAIL_FROM_TOP' // Get from "# Client: EMAIL" line above
+var emailSlug = createHash('sha256').update(clientEmail.toLowerCase()).digest('hex').substring(0, 12)
+console.log(emailSlug) // Use this value in URLs below
+```
+
+Once deployed, replace {emailSlug} with the calculated hash:
+- Brand Guidelines: `https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/brand-guidelines/`
+- 100 Ideas: `https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/100-ideas/`
+- Competitor Report: `https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/competitor-report/`
+- Writing Style Guide: `https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/writing-style-guide/`
+- Podcast List: `https://www.innovationbound.com/private/five-customized-ai-demos/{emailSlug}/podcast-list/`
 
 ## Notes
 
